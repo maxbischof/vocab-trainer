@@ -8,7 +8,7 @@ export default function Task({ word, onSolution }) {
   function onSubmit(event) {
     event.preventDefault()
     const input = userInput.toLowerCase().trim()
-    const reference = word.fields.germanword.toLowerCase().trim()
+    const reference = word.fields.foreignword.toLowerCase().trim()
 
     if (input === reference) {
       setBackgroundColor('var(--success)')
@@ -24,12 +24,12 @@ export default function Task({ word, onSolution }) {
 
   return (
     <TaskContainer backgroundColor={backgroundColor}>
-      <h2>{word.fields.foreignword}</h2>
+      <h2>{word.fields.germanword}</h2>
       <form onSubmit={onSubmit}>
         <input
           type="text"
           name="userTranslation"
-          placeholder="Übersetze auf Deutsch"
+          placeholder="Übersetze auf Französisch"
           onBlur={onSubmit}
           onChange={(e) => setUserInput(e.target.value)}
           value={userInput}

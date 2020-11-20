@@ -7,7 +7,7 @@ export default function Task({ word, onSolution }) {
 
   function onSubmit(event) {
     event.preventDefault()
-    if (userInput === word.fields.germanword.toLowerCase()) {
+    if (userInput.toLowerCase() === word.fields.germanword.toLowerCase()) {
       setBackgroundColor('var(--success)')
     } else {
       setBackgroundColor('var(--error)')

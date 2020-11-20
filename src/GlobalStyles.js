@@ -4,7 +4,8 @@ export default createGlobalStyle`
     :root {
         --background: white;
         --text: #2F2F2F;
-        
+        --success: #2ecc71;
+        --error: #e74c3c;
     }
 
     html {

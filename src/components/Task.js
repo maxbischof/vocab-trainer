@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 export default function Task({ word, onSolution }) {
   const [backgroundColor, setBackgroundColor] = useState()
+  const [userInput, setUserInput] = useState('')
 
   function onSubmit(event) {
     event.preventDefault()
-    const userTranslation = event.target.userTranslation.value.toLowerCase()
-    if (userTranslation === word.fields.germanword.toLowerCase()) {
+    if (userInput === word.fields.germanword.toLowerCase()) {
       setBackgroundColor('var(--success)')
     } else {
       setBackgroundColor('var(--error)')
@@ -16,7 +16,7 @@ export default function Task({ word, onSolution }) {
       setBackgroundColor('white')
     }, 1000)
     onSolution()
-    event.target.userTranslation.value = ''
+    setUserInput('')
   }
 
   return (
@@ -27,6 +27,9 @@ export default function Task({ word, onSolution }) {
           type="text"
           name="userTranslation"
           placeholder="Übersetze auf Deutsch"
+          onBlur={onSubmit}
+          onChange={(e) => setUserInput(e.target.value)}
+          value={userInput}
         ></input>
       </form>
     </TaskContainer>

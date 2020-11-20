@@ -7,13 +7,16 @@ export default function Task({ word, onSolution }) {
 
   function onSubmit(event) {
     event.preventDefault()
-    if (userInput.toLowerCase() === word.fields.germanword.toLowerCase()) {
+    const input = userInput.toLowerCase().trim()
+    const reference = word.fields.germanword.toLowerCase().trim()
+
+    if (input === reference) {
       setBackgroundColor('var(--success)')
     } else {
       setBackgroundColor('var(--error)')
     }
     setTimeout(() => {
-      setBackgroundColor('white')
+      setBackgroundColor('var(--background)')
     }, 1000)
     onSolution()
     setUserInput('')
@@ -42,5 +45,6 @@ const TaskContainer = styled.div`
   width: 100vw;
   padding 50px;
   ${(props) =>
-    props.backgroundColor === 'white' && 'transition: background 1s ease-out;'}
+    props.backgroundColor === 'var(--background)' &&
+    'transition: background 1s ease-out;'}
 `

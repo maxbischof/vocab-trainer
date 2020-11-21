@@ -33,6 +33,10 @@ export default function Task({ word, onSolution }) {
           onBlur={onSubmit}
           onChange={(e) => setUserInput(e.target.value)}
           value={userInput}
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
         ></input>
       </form>
     </TaskContainer>

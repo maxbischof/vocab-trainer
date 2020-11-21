@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Exercise from './components/Exercise'
 import { useContent } from './hooks/contentful'
 import { Route } from 'react-router-dom'
+import TestCreator from './components/TestCreator'
 
 function App() {
   const words = useContent('word')
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/">
-        <h1>Form</h1>
+        <TestCreator>Form</TestCreator>
       </Route>
       <Route path="/exercise">
         {words && !windowlostFocus && <Exercise words={words} />}

@@ -4,6 +4,7 @@ import axios from 'axios'
 export default function TestCreator() {
   const [words, setWords] = useState({ words: [] })
   const [formInput, setFormInput] = useState({})
+  const [testURL, setTestURL] = useState()
 
   function onSubmit(event) {
     event.preventDefault()
@@ -21,11 +22,12 @@ export default function TestCreator() {
   }
 
   function createTest() {
-    axios.post('/test', words).then((res) => console.log(res))
+    axios.post('/test', words).then((res) => setTestURL(res.data))
   }
 
   return (
     <>
+      <h2>Test-URL: /{testURL}</h2>
       {words.words.map((word) => (
         <p key={word.foreign}>
           {word.foreign} = {word.native}

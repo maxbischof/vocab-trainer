@@ -1,8 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Task from './Task'
+import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
-export default function Exercise({ words }) {
+export default function Exercise() {
   const [currentTask, setCurrentTask] = useState(0)
+  const { testID } = useParams()
+  const [words, setWords] = useState()
+
+  useEffect(() => {
+    axios
+      .get('/test/' + testID)
+      .then((response) => setWords(response.data.words))
+  }, [testID])
 
   function openNextTask() {
     if (currentTask < words.length - 1) {
@@ -11,5 +21,9 @@ export default function Exercise({ words }) {
       setCurrentTask(0)
     }
   }
-  return <Task onSolution={openNextTask} word={words[currentTask]} />
+  return words ? (
+    <Task onSolution={openNextTask} word={words[currentTask]} />
+  ) : (
+    <p>Loading...</p>
+  )
 }

@@ -8,7 +8,7 @@ export default function Task({ word, onSolution }) {
   function onSubmit(event) {
     event.preventDefault()
     const input = userInput.toLowerCase().trim()
-    const reference = word.fields.foreignword.toLowerCase().trim()
+    const reference = word.foreign.toLowerCase().trim()
 
     if (input === reference) {
       setBackgroundColor('var(--success)')
@@ -24,7 +24,7 @@ export default function Task({ word, onSolution }) {
 
   return (
     <TaskContainer backgroundColor={backgroundColor}>
-      <h2>{word.fields.germanword}</h2>
+      <h2>{word.native}</h2>
       <form onSubmit={onSubmit}>
         <input
           type="text"

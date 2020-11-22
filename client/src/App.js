@@ -16,8 +16,8 @@ function App() {
       <Route exact path="/">
         <TestCreator>Form</TestCreator>
       </Route>
-      <Route path="/exercise">
-        {words && !windowlostFocus && <Exercise words={words} />}
+      <Route path="/test/:testID">
+        {!windowlostFocus && <Exercise />}
         {windowlostFocus && <div>Lost Focus</div>}
       </Route>
     </div>

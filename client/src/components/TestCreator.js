@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 export default function TestCreator() {
-  const [words, setWords] = useState([])
+  const [words, setWords] = useState({ words: [] })
   const [formInput, setFormInput] = useState({})
 
   function onSubmit(event) {
     event.preventDefault()
-    const newWords = [...words]
-    newWords.push(formInput)
+    const newWords = {}
+    newWords.words = [...words.words]
+    newWords.words.push(formInput)
     setWords(newWords)
   }
 
@@ -18,13 +20,18 @@ export default function TestCreator() {
     setFormInput(newFormInput)
   }
 
+  function createTest() {
+    axios.post('/test', words).then((res) => console.log(res))
+  }
+
   return (
     <>
-      {words.map((word) => (
-        <p>
+      {words.words.map((word) => (
+        <p key={word.foreign}>
           {word.foreign} = {word.native}
         </p>
       ))}
+      <button onClick={createTest}>Test erstellen</button>
       <form onSubmit={onSubmit}>
         <input
           name="foreign"

@@ -9,10 +9,6 @@ const tests = [{ id: 0 }]
 
 app.use(express.static(path.join(__dirname, 'client/build')))
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
-})
-
 app.post('/test', (req, res) => {
   const receivedTest = req.body
   const lastID = tests[tests.length - 1].id
@@ -27,4 +23,8 @@ app.get('/test/:id', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
+})
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })

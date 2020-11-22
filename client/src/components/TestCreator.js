@@ -27,7 +27,7 @@ export default function TestCreator() {
 
   return (
     <>
-      <h2>Test-URL: /test/{testURL}</h2>
+      <h2>Test-URL: /tests/{testURL}</h2>
       {words.words.map((word) => (
         <p key={word.foreign}>
           {word.foreign} = {word.native}

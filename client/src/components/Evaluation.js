@@ -1,5 +1,6 @@
 import Axios from 'axios'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { evaluate } from '../lib/evaluation'
 
 export default function Evaluation({ words, answers, name, testID }) {
@@ -16,8 +17,13 @@ export default function Evaluation({ words, answers, name, testID }) {
   }, [name, result, testID])
 
   return (
-    <h2>
-      Du hast {result} / {maxResult} Punkten erreicht.
-    </h2>
+    <>
+      <h2>
+        Du hast {result} / {maxResult} Punkten erreicht.
+      </h2>
+      <Link to={'/results/' + testID}>
+        <button type="button">Alle Ergebnisse ansehen</button>
+      </Link>
+    </>
   )
 }

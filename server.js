@@ -18,14 +18,18 @@ app.post('/test', (req, res) => {
   res.send(receivedTest.id.toString())
 })
 
+app.get('/test/:id', (req, res) => {
+  res.send(tests.find((test) => test.id == req.params.id))
+})
+
 app.post('/result', (req, res) => {
   const receivedResult = req.body
   results.push(receivedResult)
   res.send(receivedResult)
 })
 
-app.get('/test/:id', (req, res) => {
-  res.send(tests.find((test) => test.id == req.params.id))
+app.get('/testresult/:id', (req, res) => {
+  res.send(results.filter((result) => result.testID === req.params.id))
 })
 
 app.listen(port, () => {

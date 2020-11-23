@@ -3,7 +3,7 @@ import Task from './Task'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-export default function Exercise() {
+export default function Test() {
   const [currentTask, setCurrentTask] = useState(0)
   const { testID } = useParams()
   const [words, setWords] = useState()

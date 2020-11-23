@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Exercise from './components/Exercise'
+import Test from './components/Test'
 import { Route } from 'react-router-dom'
 import TestCreator from './components/TestCreator'
 
@@ -15,7 +15,7 @@ function App() {
         <TestCreator>Form</TestCreator>
       </Route>
       <Route path="/tests/:testID">
-        {!windowlostFocus && <Exercise />}
+        {!windowlostFocus && <Test />}
         {windowlostFocus && <div>Lost Focus</div>}
       </Route>
     </div>

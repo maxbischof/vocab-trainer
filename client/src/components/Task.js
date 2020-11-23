@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-export default function Task({ word, onSolution }) {
+export default function Task({ word, onSolution, addAnswer }) {
   const [backgroundColor, setBackgroundColor] = useState()
   const [userInput, setUserInput] = useState('')
 
@@ -9,6 +9,8 @@ export default function Task({ word, onSolution }) {
     event.preventDefault()
     const input = userInput.toLowerCase().trim()
     const reference = word.foreign.toLowerCase().trim()
+
+    addAnswer(userInput)
 
     if (input === reference) {
       setBackgroundColor('var(--success)')

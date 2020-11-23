@@ -9,6 +9,8 @@ export default function Test() {
   const { testID } = useParams()
   const [words, setWords] = useState()
   const [answers, setAnswers] = useState([])
+  const [nameFormInput, setNameFormInput] = useState()
+  const [name, setName] = useState()
 
   useEffect(() => {
     axios
@@ -30,7 +32,22 @@ export default function Test() {
     setAnswers(newAnswers)
   }
 
-  if (words && answers.length !== words.length) {
+  function onSubmitName(event) {
+    event.preventDefault()
+    setName(nameFormInput)
+  }
+
+  if (!name) {
+    return (
+      <form onSubmit={onSubmitName}>
+        <input
+          type="text"
+          placeholder="Bitte Namen eingeben"
+          onChange={(event) => setNameFormInput(event.target.value)}
+        ></input>
+      </form>
+    )
+  } else if (words && answers.length !== words.length) {
     return (
       <Task
         onSolution={openNextTask}
@@ -39,7 +56,9 @@ export default function Test() {
       />
     )
   } else if (words && answers.length === words.length) {
-    return <Evaluation words={words} answers={answers} />
+    return (
+      <Evaluation words={words} answers={answers} name={name} testID={testID} />
+    )
   } else {
     return <p>Loading...</p>
   }

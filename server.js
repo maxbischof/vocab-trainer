@@ -6,6 +6,7 @@ const path = require('path')
 app.use(express.json())
 
 const tests = [{ id: 0 }]
+const results = []
 
 app.use(express.static(path.join(__dirname, 'client/build')))
 
@@ -15,6 +16,12 @@ app.post('/test', (req, res) => {
   receivedTest.id = lastID + 1
   tests.push(receivedTest)
   res.send(receivedTest.id.toString())
+})
+
+app.post('/result', (req, res) => {
+  const receivedResult = req.body
+  results.push(receivedResult)
+  res.send(receivedResult)
 })
 
 app.get('/test/:id', (req, res) => {

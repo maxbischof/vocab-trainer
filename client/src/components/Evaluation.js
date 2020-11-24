@@ -1,9 +1,8 @@
-import Axios from 'axios'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { evaluate } from '../lib/evaluation'
 
-export default function Evaluation({ words, answers, name, testID }) {
+export default function Evaluation({ words, answers, name, testID, db }) {
   let result = 0
   const maxResult = words.length
 
@@ -12,9 +11,21 @@ export default function Evaluation({ words, answers, name, testID }) {
   })
 
   useEffect(() => {
-    const resultObject = { result: result, testID: testID, name: name }
-    Axios.post('/result', resultObject).then((res) => console.log(res))
-  }, [name, result, testID])
+    const resultObject = { result: result, name: name }
+    const resultsCollection = db
+      .collection('tests')
+      .doc(testID)
+      .collection('results')
+
+    resultsCollection
+      .add({ resultObject })
+      .then(function (docRef) {
+        console.log('Document written with ID: ', docRef.id)
+      })
+      .catch(function (error) {
+        console.error('Error adding document: ', error)
+      })
+  }, [name, result, testID, db])
 
   return (
     <>

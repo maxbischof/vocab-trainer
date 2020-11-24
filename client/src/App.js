@@ -22,7 +22,7 @@ function App() {
         {windowlostFocus && <div>Lost Focus</div>}
       </Route>
       <Route path="/results/:testID">
-        <Results />
+        {firestore && <Results db={firestore} />}
       </Route>
     </div>
   )

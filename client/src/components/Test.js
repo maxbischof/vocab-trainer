@@ -68,7 +68,13 @@ export default function Test({ db }) {
     )
   } else if (words && answers.length === words.length) {
     return (
-      <Evaluation words={words} answers={answers} name={name} testID={testID} />
+      <Evaluation
+        words={words}
+        answers={answers}
+        name={name}
+        testID={testID}
+        db={db}
+      />
     )
   } else {
     return <p>Loading...</p>

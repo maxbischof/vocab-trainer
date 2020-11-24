@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 
-export default function TestCreator() {
-  const [words, setWords] = useState({ words: [] })
+export default function TestCreator({ db }) {
+  const [words, setWords] = useState([])
   const [formInput, setFormInput] = useState({})
   const [testURL, setTestURL] = useState()
 
   function onSubmit(event) {
     event.preventDefault()
-    const newWords = {}
-    newWords.words = [...words.words]
-    newWords.words.push(formInput)
+    const newWords = [...words]
+    newWords.push(formInput)
     setWords(newWords)
   }
 
@@ -22,13 +20,21 @@ export default function TestCreator() {
   }
 
   function createTest() {
-    axios.post('/test', words).then((res) => setTestURL(res.data))
+    db.collection('tests')
+      .add({ words })
+      .then(function (docRef) {
+        console.log('Document written with ID: ', docRef.id)
+        setTestURL(docRef.id)
+      })
+      .catch(function (error) {
+        console.error('Error adding document: ', error)
+      })
   }
 
   return (
     <>
       <h2>Test-URL: /tests/{testURL}</h2>
-      {words.words.map((word) => (
+      {words.map((word) => (
         <p key={word.foreign}>
           {word.foreign} = {word.native}
         </p>

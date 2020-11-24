@@ -18,7 +18,7 @@ function App() {
         <TestCreator db={firestore}>Form</TestCreator>
       </Route>
       <Route path="/tests/:testID">
-        {!windowlostFocus && <Test />}
+        {!windowlostFocus && firestore && <Test db={firestore} />}
         {windowlostFocus && <div>Lost Focus</div>}
       </Route>
       <Route path="/results/:testID">

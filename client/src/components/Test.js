@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import Evaluation from './Evaluation'
 
-export default function Test() {
+export default function Test({ db }) {
   const [currentTask, setCurrentTask] = useState(0)
   const { testID } = useParams()
   const [words, setWords] = useState()
@@ -13,10 +13,21 @@ export default function Test() {
   const [name, setName] = useState()
 
   useEffect(() => {
-    axios
-      .get('/test/' + testID)
-      .then((response) => setWords(response.data.words))
-  }, [testID])
+    const docRef = db.collection('tests').doc(testID)
+
+    docRef
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setWords(doc.data().words)
+        } else {
+          console.log('No such document!')
+        }
+      })
+      .catch((error) => {
+        console.log('Error getting document:', error)
+      })
+  }, [testID, db])
 
   function openNextTask() {
     if (currentTask < words.length - 1) {

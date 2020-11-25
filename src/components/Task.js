@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { evaluate } from '../lib/evaluation'
 
 export default function Task({ word, onSolution, addAnswer }) {
   const [backgroundColor, setBackgroundColor] = useState()
@@ -7,12 +8,10 @@ export default function Task({ word, onSolution, addAnswer }) {
 
   function onSubmit(event) {
     event.preventDefault()
-    const input = userInput.toLowerCase().trim()
-    const reference = word.foreign.toLowerCase().trim()
-
     addAnswer(userInput)
 
-    if (input === reference) {
+    if (evaluate(userInput, word.foreign) > 0) {
+      console.log('success')
       setBackgroundColor('var(--success)')
     } else {
       setBackgroundColor('var(--error)')

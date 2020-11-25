@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
+import Input from './ui/Input'
 
 export default function TestCreator({ db }) {
   const [words, setWords] = useState([])
@@ -57,23 +59,17 @@ export default function TestCreator({ db }) {
   }
 
   return (
-    <>
-      <h2>Test-URL: {testURL}</h2>
-      {words.map((word) => (
-        <p key={word.foreign}>
-          {word.foreign} = {word.native}
-        </p>
-      ))}
-      <button onClick={createTest}>Test erstellen</button>
-      <form onSubmit={onSubmit}>
-        <input
+    <Container>
+      <h1>Test erstellen</h1>
+      <Form onSubmit={onSubmit}>
+        <Input
           name="foreign"
           type="text"
           placeholder="Fremdsprache"
           onChange={onChange}
           value={formInput.foreign}
         />
-        <input
+        <Input
           name="native"
           type="text"
           placeholder="Deutsch"
@@ -81,7 +77,25 @@ export default function TestCreator({ db }) {
           value={formInput.native}
         />
         <button type="submit">Wortpaar hinzufügen</button>
-      </form>
-    </>
+        <button onClick={createTest}>Test erstellen</button>
+        {words.map((word) => (
+          <p key={word.foreign}>
+            {word.foreign} = {word.native}
+          </p>
+        ))}
+      </Form>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`

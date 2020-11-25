@@ -23,7 +23,6 @@ export default function TestCreator({ db }) {
     db.collection('tests')
       .add({ words })
       .then(function (docRef) {
-        console.log('Document written with ID: ', docRef.id)
         setTestURL(docRef.id)
       })
       .catch(function (error) {

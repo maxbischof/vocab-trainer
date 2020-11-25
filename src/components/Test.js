@@ -12,9 +12,9 @@ export default function Test({ db }) {
   const [name, setName] = useState()
 
   useEffect(() => {
-    const docRef = db.collection('tests').doc(testID)
+    const testDoc = db.collection('tests').doc(testID)
 
-    docRef
+    testDoc
       .get()
       .then((doc) => {
         if (doc.exists) {
@@ -65,7 +65,7 @@ export default function Test({ db }) {
         addAnswer={addAnswer}
       />
     )
-  } else if (words && answers.length === words.length) {
+  } else if (answers.length === words.length) {
     return (
       <Evaluation
         words={words}

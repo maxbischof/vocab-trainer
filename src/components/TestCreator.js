@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import Button from './ui/Button'
 import Input from './ui/Input'
 
 export default function TestCreator({ db }) {
@@ -59,8 +60,9 @@ export default function TestCreator({ db }) {
   }
 
   return (
-    <Container>
+    <StyledTestCreator>
       <h1>Test erstellen</h1>
+      <h2>{testURL}</h2>
       <Form onSubmit={onSubmit}>
         <Input
           name="foreign"
@@ -76,26 +78,58 @@ export default function TestCreator({ db }) {
           onChange={onChange}
           value={formInput.native}
         />
-        <button type="submit">Wortpaar hinzufügen</button>
-        <button onClick={createTest}>Test erstellen</button>
-        {words.map((word) => (
-          <p key={word.foreign}>
-            {word.foreign} = {word.native}
-          </p>
-        ))}
+        <Button type="submit">Wortpaar hinzufügen</Button>
       </Form>
-    </Container>
+      {words.length > 0 && (
+        <TestPreview>
+          <Button onClick={createTest}>Test erstellen</Button>
+          <Ul>
+            {words.map((word) => (
+              <Li key={word.foreign}>
+                <b>{word.foreign}</b>
+                <small>{word.native}</small>
+              </Li>
+            ))}
+          </Ul>
+        </TestPreview>
+      )}
+    </StyledTestCreator>
   )
 }
 
-const Container = styled.div`
+const Ul = styled.ul`
+  list-style-type: none;
+  padding: 0;
+`
+
+const Li = styled.li`
+  padding: 10px;
+  border-bottom: 1px solid var(--text);
+  display: flex;
+  flex-direction: column;
+`
+
+const StyledTestCreator = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+const TestPreview = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 40px;
 `
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  padding: 10px;
 `

@@ -6,6 +6,8 @@ export default createGlobalStyle`
         --text: #2F2F2F;
         --success: #2ecc71;
         --error: #e74c3c;
+        --buttonbackground: #2ecc71;
+        --buttontext: white;
     }
 
     html {

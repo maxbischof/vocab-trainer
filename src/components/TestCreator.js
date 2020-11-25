@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function TestCreator({ db }) {
   const [words, setWords] = useState([])
-  const [formInput, setFormInput] = useState({})
+  const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const [testURL, setTestURL] = useState()
 
   function onSubmit(event) {
@@ -10,6 +10,7 @@ export default function TestCreator({ db }) {
     const newWords = [...words]
     newWords.push(formInput)
     setWords(newWords)
+    setFormInput({ foreign: '', native: '' })
   }
 
   function onChange(event) {
@@ -45,12 +46,14 @@ export default function TestCreator({ db }) {
           type="text"
           placeholder="Fremdsprache"
           onChange={onChange}
+          value={formInput.foreign}
         />
         <input
           name="native"
           type="text"
           placeholder="Deutsch"
           onChange={onChange}
+          value={formInput.native}
         />
         <button type="submit">Wortpaar hinzufügen</button>
       </form>

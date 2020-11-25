@@ -20,11 +20,36 @@ export default function TestCreator({ db }) {
     setFormInput(newFormInput)
   }
 
-  function createTest() {
+  async function createTest() {
+    let isUnique = false
+    let i = 0
+
+    while (isUnique === false && i < 10) {
+      const testID = Math.floor(Math.random() * 1000000).toString()
+      i++
+      console.log('try')
+      isUnique = await db
+        .collection('tests')
+        .doc(testID)
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            return false
+          } else {
+            return true
+          }
+        })
+
+      isUnique && addToFirebase(words, testID)
+    }
+  }
+
+  function addToFirebase(words, testID) {
     db.collection('tests')
-      .add({ words })
-      .then(function (docRef) {
-        setTestURL(docRef.id)
+      .doc(testID)
+      .set({ words })
+      .then(() => {
+        setTestURL('/tests/' + testID)
       })
       .catch(function (error) {
         console.error('Error adding document: ', error)
@@ -33,7 +58,7 @@ export default function TestCreator({ db }) {
 
   return (
     <>
-      <h2>Test-URL: /tests/{testURL}</h2>
+      <h2>Test-URL: {testURL}</h2>
       {words.map((word) => (
         <p key={word.foreign}>
           {word.foreign} = {word.native}

@@ -3,6 +3,9 @@ import Task from './Task'
 import { useParams } from 'react-router-dom'
 import Evaluation from './Evaluation'
 import { useTest } from '../hooks/firebase'
+import Input from './ui/Input'
+import styled from 'styled-components'
+import Button from './ui/Button'
 
 export default function Test({ db }) {
   const { testID } = useParams()
@@ -33,13 +36,17 @@ export default function Test({ db }) {
 
   if (!name) {
     return (
-      <form onSubmit={onSubmitName}>
-        <input
-          type="text"
-          placeholder="Bitte Namen eingeben"
-          onChange={(event) => setNameFormInput(event.target.value)}
-        ></input>
-      </form>
+      <StyledTest>
+        <h1>Vokabeltest</h1>
+        <Form onSubmit={onSubmitName}>
+          <Input
+            type="text"
+            placeholder="Bitte Namen eingeben"
+            onChange={(event) => setNameFormInput(event.target.value)}
+          ></Input>
+          <Button>Test starten</Button>
+        </Form>
+      </StyledTest>
     )
   } else if (words && answers.length !== words.length) {
     return (
@@ -63,3 +70,15 @@ export default function Test({ db }) {
     return <p>Loading...</p>
   }
 }
+
+const StyledTest = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`

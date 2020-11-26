@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import TestLink from './TestLink'
 import Button from './ui/Button'
 import Input from './ui/Input'
 
@@ -59,41 +60,49 @@ export default function TestCreator({ db }) {
       })
   }
 
+  console.log(window.location.host)
+
   return (
-    <StyledTestCreator>
-      <h1>Test erstellen</h1>
-      <h2>{testURL}</h2>
-      <Form onSubmit={onSubmit}>
-        <Input
-          name="foreign"
-          type="text"
-          placeholder="Fremdsprache"
-          onChange={onChange}
-          value={formInput.foreign}
-        />
-        <Input
-          name="native"
-          type="text"
-          placeholder="Deutsch"
-          onChange={onChange}
-          value={formInput.native}
-        />
-        <Button type="submit">Wortpaar hinzufügen</Button>
-      </Form>
-      {words.length > 0 && (
-        <TestPreview>
-          <Button onClick={createTest}>Test erstellen</Button>
-          <Ul>
-            {words.map((word) => (
-              <Li key={word.foreign}>
-                <b>{word.foreign}</b>
-                <small>{word.native}</small>
-              </Li>
-            ))}
-          </Ul>
-        </TestPreview>
+    <>
+      {testURL ? (
+        <TestLink testURL={testURL} />
+      ) : (
+        <StyledTestCreator>
+          <h1>Test erstellen</h1>
+          <h2>{testURL}</h2>
+          <Form onSubmit={onSubmit}>
+            <Input
+              name="foreign"
+              type="text"
+              placeholder="Fremdsprache"
+              onChange={onChange}
+              value={formInput.foreign}
+            />
+            <Input
+              name="native"
+              type="text"
+              placeholder="Deutsch"
+              onChange={onChange}
+              value={formInput.native}
+            />
+            <Button type="submit">Wortpaar hinzufügen</Button>
+          </Form>
+          {words.length > 0 && (
+            <TestPreview>
+              <Button onClick={createTest}>Test erstellen</Button>
+              <Ul>
+                {words.map((word) => (
+                  <Li key={word.foreign}>
+                    <b>{word.foreign}</b>
+                    <small>{word.native}</small>
+                  </Li>
+                ))}
+              </Ul>
+            </TestPreview>
+          )}
+        </StyledTestCreator>
       )}
-    </StyledTestCreator>
+    </>
   )
 }
 

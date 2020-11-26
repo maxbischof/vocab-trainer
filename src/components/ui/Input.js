@@ -16,6 +16,7 @@ export default function Input({ name, type, placeholder, onChange, value }) {
 const StyledInput = styled.input`
   border: none;
   border-bottom: 1px solid var(--text);
+  border-radius: 0;
   padding: 5px;
   margin: 10px 0 10px 0;
 `

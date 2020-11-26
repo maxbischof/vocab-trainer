@@ -10,7 +10,7 @@ export default function TestLink({ testURL }) {
     <StyledTestLink>
       <h1>Test erstellt</h1>
       Dein Link zum Test:
-      <Link href={fullURL}>{fullURL}</Link>
+      <Link href={testURL}>{fullURL}</Link>
       <CopyToClipboard text={fullURL}>
         <Button>Copy</Button>
       </CopyToClipboard>

@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link as RouterLink } from 'react-router-dom'
 
 export default function Link({ href, children }) {
-  return <StyledLink href={href}>{children}</StyledLink>
+  return <StyledLink to={href}>{children}</StyledLink>
 }
 
-const StyledLink = styled.a`
+const StyledLink = styled(RouterLink)`
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid var(--text);

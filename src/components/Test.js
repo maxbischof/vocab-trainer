@@ -1,32 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Task from './Task'
 import { useParams } from 'react-router-dom'
 import Evaluation from './Evaluation'
+import { useTest } from '../hooks/firebase'
 
 export default function Test({ db }) {
-  const [currentTask, setCurrentTask] = useState(0)
   const { testID } = useParams()
-  const [words, setWords] = useState()
+  const [currentTask, setCurrentTask] = useState(0)
   const [answers, setAnswers] = useState([])
   const [nameFormInput, setNameFormInput] = useState()
   const [name, setName] = useState()
-
-  useEffect(() => {
-    const testDoc = db.collection('tests').doc(testID)
-
-    testDoc
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          setWords(doc.data().words)
-        } else {
-          console.log('No such document!')
-        }
-      })
-      .catch((error) => {
-        console.log('Error getting document:', error)
-      })
-  }, [testID, db])
+  const words = useTest(db, testID)
 
   function openNextTask() {
     if (currentTask < words.length - 1) {

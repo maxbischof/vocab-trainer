@@ -24,3 +24,26 @@ export function useFirestore() {
 
   return db
 }
+
+export function useTest(db, testID) {
+  const [words, setWords] = useState()
+
+  useEffect(() => {
+    const testDoc = db.collection('tests').doc(testID)
+
+    testDoc
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setWords(doc.data().words)
+        } else {
+          console.log('No such document!')
+        }
+      })
+      .catch((error) => {
+        console.log('Error getting document:', error)
+      })
+  }, [testID, db])
+
+  return words
+}

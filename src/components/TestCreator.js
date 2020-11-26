@@ -4,6 +4,7 @@ import TestLink from './TestLink'
 import Button from './ui/Button'
 import Input from './ui/Input'
 import { ReactComponent as DeleteIcon } from '../icons/delete.svg'
+import { createTest } from '../lib/firebase'
 
 export default function TestCreator({ db }) {
   const [words, setWords] = useState([])
@@ -31,41 +32,6 @@ export default function TestCreator({ db }) {
     const newWords = [...words]
     newWords.splice(index, 1)
     setWords(newWords)
-  }
-
-  async function createTest() {
-    let isUnique = false
-    let i = 0
-
-    while (isUnique === false && i < 10) {
-      const testID = Math.floor(Math.random() * 1000000).toString()
-      i++
-      isUnique = await db
-        .collection('tests')
-        .doc(testID)
-        .get()
-        .then((doc) => {
-          if (doc.exists) {
-            return false
-          } else {
-            return true
-          }
-        })
-
-      isUnique && addToFirebase(words, testID)
-    }
-  }
-
-  function addToFirebase(words, testID) {
-    db.collection('tests')
-      .doc(testID)
-      .set({ words })
-      .then(() => {
-        setTestURL('/tests/' + testID)
-      })
-      .catch(function (error) {
-        console.error('Error adding document: ', error)
-      })
   }
 
   return (
@@ -96,7 +62,9 @@ export default function TestCreator({ db }) {
           </Form>
           {words.length > 0 && (
             <TestPreview>
-              <Button onClick={createTest}>Test erstellen</Button>
+              <Button onClick={() => createTest(words, db, setTestURL)}>
+                Test erstellen
+              </Button>
               <Ul>
                 {words.map((word, index) => (
                   <Li key={word.foreign}>

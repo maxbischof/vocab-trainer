@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createRef, useState } from 'react'
 import styled from 'styled-components'
 import TestLink from './TestLink'
 import Button from './ui/Button'
@@ -8,6 +8,7 @@ export default function TestCreator({ db }) {
   const [words, setWords] = useState([])
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const [testURL, setTestURL] = useState()
+  const foreignInput = createRef()
 
   function onSubmit(event) {
     event.preventDefault()
@@ -15,6 +16,7 @@ export default function TestCreator({ db }) {
     newWords.push(formInput)
     setWords(newWords)
     setFormInput({ foreign: '', native: '' })
+    foreignInput.current.focus()
   }
 
   function onChange(event) {
@@ -31,7 +33,6 @@ export default function TestCreator({ db }) {
     while (isUnique === false && i < 10) {
       const testID = Math.floor(Math.random() * 1000000).toString()
       i++
-      console.log('try')
       isUnique = await db
         .collection('tests')
         .doc(testID)
@@ -60,8 +61,6 @@ export default function TestCreator({ db }) {
       })
   }
 
-  console.log(window.location.host)
-
   return (
     <>
       {testURL ? (
@@ -77,6 +76,7 @@ export default function TestCreator({ db }) {
               placeholder="Fremdsprache"
               onChange={onChange}
               value={formInput.foreign}
+              ref={foreignInput}
             />
             <Input
               name="native"

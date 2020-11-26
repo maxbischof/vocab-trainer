@@ -1,17 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Input({ name, type, placeholder, onChange, value }) {
-  return (
+const Input = React.forwardRef(
+  ({ name, type, placeholder, onChange, value }, ref) => (
     <StyledInput
       name={name}
       type={type}
       placeholder={placeholder}
       onChange={onChange}
       value={value}
+      ref={ref}
     ></StyledInput>
   )
-}
+)
 
 const StyledInput = styled.input`
   border: none;
@@ -20,3 +21,5 @@ const StyledInput = styled.input`
   padding: 5px;
   margin: 10px 0 10px 0;
 `
+
+export default Input

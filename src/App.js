@@ -9,8 +9,8 @@ function App() {
   const [windowlostFocus, setwindowlostFocus] = useState()
   const firestore = useFirestore()
 
-  document.addEventListener('blur', () => setwindowlostFocus(true))
-  document.addEventListener('visibilitychange', () => setwindowlostFocus(true))
+  // document.addEventListener('blur', () => setwindowlostFocus(true))
+  // document.addEventListener('visibilitychange', () => setwindowlostFocus(true))
 
   return (
     <div className="App">

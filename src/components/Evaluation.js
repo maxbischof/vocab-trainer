@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 import { evaluate } from '../lib/evaluation'
+import Button from './ui/Button'
 
 export default function Evaluation({ words, answers, name, testID, db }) {
   let result = 0
@@ -28,13 +30,22 @@ export default function Evaluation({ words, answers, name, testID, db }) {
   }, [name, result, testID, db])
 
   return (
-    <>
-      <h2>
-        Du hast {result} / {maxResult} Punkten erreicht.
-      </h2>
+    <StyledEvaluation>
+      <h1>Dein Ergebnis</h1>
+      <p>
+        Du hast{' '}
+        <b>
+          {result} / {maxResult}
+        </b>{' '}
+        Punkten erreicht.
+      </p>
       <Link to={'/results/' + testID}>
-        <button type="button">Alle Ergebnisse ansehen</button>
+        <Button>Alle Ergebnisse ansehen</Button>
       </Link>
-    </>
+    </StyledEvaluation>
   )
 }
+
+const StyledEvaluation = styled.div`
+  text-align: center;
+`

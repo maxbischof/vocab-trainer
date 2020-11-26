@@ -11,7 +11,6 @@ export default function Task({ word, onSolution, addAnswer }) {
     addAnswer(userInput)
 
     if (evaluate(userInput, word.foreign) > 0) {
-      console.log('success')
       setBackgroundColor('var(--success)')
     } else {
       setBackgroundColor('var(--error)')

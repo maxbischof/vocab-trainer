@@ -56,7 +56,7 @@ export default function Test({ db }) {
         addAnswer={addAnswer}
       />
     )
-  } else if (answers.length === words.length) {
+  } else if (words && answers.length === words.length) {
     return (
       <Evaluation
         words={words}

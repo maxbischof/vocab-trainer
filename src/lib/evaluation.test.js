@@ -1,7 +1,7 @@
 import { evaluate } from './evaluation'
 
 describe('evaluate', () => {
-  it('1 Point for strictly equal words receive', () => {
+  it('1 Point for strictly equal words', () => {
     expect(evaluate('un cinéma', 'un cinéma')).toBe(1)
   })
 

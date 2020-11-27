@@ -47,7 +47,7 @@ const TaskContainer = styled.div`
   background: ${(props) => props.backgroundColor};
   height: 100vh;
   width: 100vw;
-  padding 50px;
+  padding: 50px;
   ${(props) =>
     props.backgroundColor === 'var(--background)' &&
     'transition: background 1s ease-out;'}

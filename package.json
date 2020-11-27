@@ -25,7 +25,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:cypress/recommended"
     ]
   },
   "browserslist": {
@@ -43,6 +44,7 @@
   "proxy": "http://localhost:3001",
   "devDependencies": {
     "cypress": "^6.0.0",
+    "eslint-plugin-cypress": "^2.11.2",
     "react-test-renderer": "^17.0.1"
   }
 }

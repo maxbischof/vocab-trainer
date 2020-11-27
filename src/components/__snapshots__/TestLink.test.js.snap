@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my function or component renders correctly 1`] = `
+<div
+  className="sc-dlfnbm jyuGPq"
+>
+  <h1>
+    Test erstellt
+  </h1>
+  Dein Link zum Test:
+  <a
+    className="sc-bdfBwQ iGLRAW"
+    href="/tests/123456"
+    onClick={[Function]}
+  >
+    localhost/tests/123456
+  </a>
+  <button
+    className="sc-gsTCUz hwVgqy"
+    onClick={[Function]}
+  >
+    Copy
+  </button>
+</div>
+`;

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import TestLink from './TestLink'
 import Button from './ui/Button'
 import Input from './ui/Input'
-import { ReactComponent as DeleteIcon } from '../icons/delete.svg'
 import { createTest } from '../lib/firebase'
+import WordPairList from './WordPairList'
 
 export default function TestCreator({ db }) {
   const [words, setWords] = useState([])
@@ -65,19 +65,7 @@ export default function TestCreator({ db }) {
               <Button onClick={() => createTest(words, db, setTestURL)}>
                 Test erstellen
               </Button>
-              <Ul>
-                {words.map((word, index) => (
-                  <Li key={word.foreign}>
-                    <Wordpair>
-                      <b>{word.foreign}</b>
-                      <small>{word.native}</small>
-                    </Wordpair>
-                    <Icons>
-                      <DeleteIcon onClick={() => deleteWord(index)} />
-                    </Icons>
-                  </Li>
-                ))}
-              </Ul>
+              <WordPairList words={words} deleteWord={deleteWord} />
             </TestPreview>
           )}
         </StyledTestCreator>
@@ -85,37 +73,6 @@ export default function TestCreator({ db }) {
     </>
   )
 }
-const Wordpair = styled.div`
-  grid-column: 1 / 2;
-  display: flex;
-  flex-direction: column;
-`
-
-const Icons = styled.div`
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
-  display: grid;
-  align-items: center;
-  margin: 0 0 0 25px;
-`
-
-const Ul = styled.ul`
-  list-style-type: none;
-  padding: 0;
-`
-
-const Li = styled.li`
-  padding: 10px;
-  border-bottom: 1px solid var(--text);
-  display: grid;
-  grid-template-columns: auto 40px;
-`
-
-const StyledTestCreator = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
 
 const TestPreview = styled.div`
   display: flex;
@@ -125,6 +82,12 @@ const TestPreview = styled.div`
   border-radius: 10px;
   padding: 10px;
   margin: 40px;
+`
+
+const StyledTestCreator = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const Form = styled.form`

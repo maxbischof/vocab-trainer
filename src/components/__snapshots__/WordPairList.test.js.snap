@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ul
+  className="sc-hKgILt gAqaJR"
+>
+  <li
+    className="sc-bdfBwQ ldQlgV"
+  >
+    <div
+      className="sc-gsTCUz eugYRC"
+    >
+      <b>
+        le ordinateur
+      </b>
+      <small>
+        der Computer
+      </small>
+    </div>
+    <svg
+      className="sc-dlfnbm lnKTpL"
+      onClick={[Function]}
+    >
+      delete.svg
+    </svg>
+  </li>
+  <li
+    className="sc-bdfBwQ ldQlgV"
+  >
+    <div
+      className="sc-gsTCUz eugYRC"
+    >
+      <b>
+        la école
+      </b>
+      <small>
+        die Schule
+      </small>
+    </div>
+    <svg
+      className="sc-dlfnbm lnKTpL"
+      onClick={[Function]}
+    >
+      delete.svg
+    </svg>
+  </li>
+</ul>
+`;

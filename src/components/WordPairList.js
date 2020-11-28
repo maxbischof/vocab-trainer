@@ -6,7 +6,12 @@ export default function WordPairList({ words, deleteWord }) {
   return (
     <StyledWordPairList>
       {words.map((word, index) => (
-        <WordPair word={word} index={index} deleteWord={deleteWord} />
+        <WordPair
+          word={word}
+          index={index}
+          deleteWord={deleteWord}
+          key={word.foreign}
+        />
       ))}
     </StyledWordPairList>
   )

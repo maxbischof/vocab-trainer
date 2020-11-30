@@ -3,15 +3,13 @@ import Task from './Task'
 import { useParams } from 'react-router-dom'
 import Evaluation from './Evaluation'
 import { useTest } from '../hooks/firebase'
-import Input from './ui/Input'
 import styled from 'styled-components'
-import Button from './ui/Button'
+import NameForm from './NameForm'
 
 export default function Test({ db }) {
   const { testID } = useParams()
   const [currentTask, setCurrentTask] = useState(0)
   const [answers, setAnswers] = useState([])
-  const [nameFormInput, setNameFormInput] = useState()
   const [name, setName] = useState()
   const words = useTest(db, testID)
 
@@ -29,23 +27,11 @@ export default function Test({ db }) {
     setAnswers(newAnswers)
   }
 
-  function onSubmitName(event) {
-    event.preventDefault()
-    setName(nameFormInput)
-  }
-
   if (!name) {
     return (
       <StyledTest>
         <h1>Vokabeltest</h1>
-        <Form onSubmit={onSubmitName}>
-          <Input
-            type="text"
-            placeholder="Bitte Namen eingeben"
-            onChange={(event) => setNameFormInput(event.target.value)}
-          ></Input>
-          <Button>Test starten</Button>
-        </Form>
+        <NameForm setName={setName} />
       </StyledTest>
     )
   } else if (words && answers.length !== words.length) {
@@ -72,12 +58,6 @@ export default function Test({ db }) {
 }
 
 const StyledTest = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;

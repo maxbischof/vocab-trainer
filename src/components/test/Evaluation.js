@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { evaluate } from '../lib/evaluation'
-import Button from './ui/Button'
+import { evaluate } from '../../lib/evaluation'
+import Button from '../ui/Button'
 
 export default function Evaluation({ words, answers, name, testID, db }) {
   let result = 0

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { evaluate } from '../lib/evaluation'
+import { evaluate } from '../../lib/evaluation'
 
 export default function Task({ word, onSolution, addAnswer }) {
   const [backgroundColor, setBackgroundColor] = useState()

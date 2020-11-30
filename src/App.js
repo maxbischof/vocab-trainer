@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Route } from 'react-router-dom'
 import { useFirestore } from './hooks/firebase'
-import Test from './components/Test'
+import Test from './components/test/Test'
 import TestCreation from './components/TestCreation'
 import Results from './components/Results'
 

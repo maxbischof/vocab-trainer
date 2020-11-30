@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Task from './Task'
 import { useParams } from 'react-router-dom'
 import Evaluation from './Evaluation'
-import { useTest } from '../hooks/firebase'
+import { useTest } from '../../hooks/firebase'
 import styled from 'styled-components'
 import NameForm from './NameForm'
 

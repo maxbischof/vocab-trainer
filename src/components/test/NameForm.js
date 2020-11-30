@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Button from './ui/Button'
-import Input from './ui/Input'
+import Button from '../ui/Button'
+import Input from '../ui/Input'
 
 export default function NameForm({ setName }) {
   const [nameFormInput, setNameFormInput] = useState()

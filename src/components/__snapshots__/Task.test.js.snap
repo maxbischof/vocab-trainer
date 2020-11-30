@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bdfBwQ bIUVHg"
+>
+  <h2>
+    der Computer
+  </h2>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autocapitalize="off"
+      autocomplete="off"
+      autocorrect="off"
+      name="userTranslation"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder="Übersetze auf Französisch"
+      spellcheck="false"
+      type="text"
+      value=""
+    />
+  </form>
+</div>
+`;

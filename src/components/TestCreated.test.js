@@ -1,5 +1,5 @@
 import React from 'react'
-import TestLink from './TestLink'
+import TestCreated from './TestCreated'
 import { BrowserRouter as Router } from 'react-router-dom'
 import renderer from 'react-test-renderer'
 
@@ -8,7 +8,7 @@ it('renders correctly', () => {
   const tree = renderer
     .create(
       <Router>
-        <TestLink testURL={testURL} />
+        <TestCreated testURL={testURL} />
       </Router>
     )
     .toJSON()

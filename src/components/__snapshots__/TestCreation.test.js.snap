@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-jrAGrp fhTUFE"
+>
+  <h1>
+    Test erstellen
+  </h1>
+  <form
+    className="sc-fubCfw hIgeyN"
+    onSubmit={[Function]}
+  >
+    <input
+      className="sc-iBPRYJ jxdMbx"
+      name="foreign"
+      onChange={[Function]}
+      placeholder="Foreign"
+      type="text"
+      value=""
+    />
+    <input
+      className="sc-iBPRYJ jxdMbx"
+      name="native"
+      onChange={[Function]}
+      placeholder="Native"
+      type="text"
+      value=""
+    />
+    <button
+      className="sc-gsTCUz hwVgqy"
+      type="submit"
+    >
+      Add word
+    </button>
+  </form>
+</div>
+`;

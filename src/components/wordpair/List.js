@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import WordPair from './WordPair'
 
-export default function WordPairList({ words, deleteWord }) {
+export default function List({ words, deleteWord }) {
   return (
     <StyledWordPairList>
       {words.map((word, index) => (

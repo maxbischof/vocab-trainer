@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ReactComponent as DeleteSVG } from '../icons/delete.svg'
+import { ReactComponent as DeleteSVG } from '../../icons/delete.svg'
 
 export default function WordPair({ word, deleteWord, index }) {
   return (

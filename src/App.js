@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Route } from 'react-router-dom'
 import { useFirestore } from './hooks/firebase'
 import Test from './components/Test'
-import TestCreator from './components/TestCreator'
+import TestCreation from './components/TestCreation'
 import Results from './components/Results'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/">
-        <TestCreator db={firestore}>Form</TestCreator>
+        <TestCreation db={firestore}>Form</TestCreation>
       </Route>
 
       {firestore && (

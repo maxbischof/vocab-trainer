@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Button from './ui/Button'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-export default function TestLink({ testURL }) {
+export default function TestCreated({ testURL }) {
   const fullURL = window.location.host + testURL
   return (
     <StyledTestLink>

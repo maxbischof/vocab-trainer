@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import TestLink from './TestLink'
+import TestLink from './TestCreated'
 import Button from './ui/Button'
 import { createTest } from '../lib/firebase'
-import WordPairList from './WordPairList'
-import WordPairForm from './WordPairForm'
+import List from './wordpair/List'
+import Form from './wordpair/Form'
 
-export default function TestCreator({ db }) {
+export default function TestCreation({ db }) {
   const [wordPairs, setWordPairs] = useState([])
   const [testURL, setTestURL] = useState()
 
@@ -23,14 +23,14 @@ export default function TestCreator({ db }) {
       ) : (
         <StyledTestCreator>
           <h1>Test erstellen</h1>
-          <WordPairForm wordPairs={wordPairs} setWordPairs={setWordPairs} />
+          <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
 
           {wordPairs.length > 0 && (
             <TestPreview>
               <Button onClick={() => createTest(wordPairs, db, setTestURL)}>
                 Test erstellen
               </Button>
-              <WordPairList words={wordPairs} deleteWord={deleteWord} />
+              <List words={wordPairs} deleteWord={deleteWord} />
             </TestPreview>
           )}
         </StyledTestCreator>

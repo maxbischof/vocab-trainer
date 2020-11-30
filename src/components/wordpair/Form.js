@@ -1,9 +1,9 @@
 import React, { createRef, useState } from 'react'
 import styled from 'styled-components'
-import Input from './ui/Input'
-import Button from './ui/Button'
+import Input from '../ui/Input'
+import Button from '../ui/Button'
 
-export default function WordPairForm({ wordPairs, setWordPairs }) {
+export default function Form({ wordPairs, setWordPairs }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const foreignInput = createRef()
 
@@ -24,7 +24,7 @@ export default function WordPairForm({ wordPairs, setWordPairs }) {
   }
 
   return (
-    <Form onSubmit={onSubmit}>
+    <StyledForm onSubmit={onSubmit}>
       <Input
         name="foreign"
         type="text"
@@ -41,11 +41,11 @@ export default function WordPairForm({ wordPairs, setWordPairs }) {
         value={formInput.native}
       />
       <Button type="submit">Add word</Button>
-    </Form>
+    </StyledForm>
   )
 }
 
-const Form = styled.form`
+const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;

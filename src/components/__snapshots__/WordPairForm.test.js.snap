@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<form
+  className="sc-dlfnbm eFjHGB"
+  onSubmit={[Function]}
+>
+  <input
+    className="sc-bdfBwQ hRYrgT"
+    name="foreign"
+    onChange={[Function]}
+    placeholder="Foreign"
+    type="text"
+    value=""
+  />
+  <input
+    className="sc-bdfBwQ hRYrgT"
+    name="native"
+    onChange={[Function]}
+    placeholder="Native"
+    type="text"
+    value=""
+  />
+  <button
+    className="sc-gsTCUz hwVgqy"
+    type="submit"
+  >
+    Add word
+  </button>
+</form>
+`;

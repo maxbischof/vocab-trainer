@@ -2,8 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-bdfBwQ bCVuid"
+  className="sc-bdfBwQ MvCMT"
   color="rgba(43, 173, 134, 1)"
+  fontSize={NaN}
+  onClick={[Function]}
 >
   A
 </div>

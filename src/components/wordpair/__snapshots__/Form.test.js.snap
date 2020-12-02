@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-dlfnbm fmdqsI"
+  className="sc-eCssSg eaqvYF"
   onSubmit={[Function]}
 >
   <input
@@ -21,6 +21,58 @@ exports[`renders correctly 1`] = `
     type="text"
     value=""
   />
+  <div
+    className="sc-dlfnbm foNBOQ"
+    color="var(--masculine)"
+    fontSize={21.5}
+    onClick={[Function]}
+  >
+    m
+  </div>
+  <div
+    className="sc-dlfnbm cDrnI"
+    color="var(--feminine)"
+    fontSize={21.5}
+    onClick={[Function]}
+  >
+    f
+  </div>
+  <div
+    className="sc-dlfnbm ddaete"
+    color="var(--neuter)"
+    fontSize={21.5}
+    onClick={[Function]}
+  >
+    n
+  </div>
+  <div
+    className="sc-hKgILt gqydTq"
+  >
+    <div
+      className="sc-dlfnbm iAePyl"
+      color="var(--noun)"
+      fontSize={31.5}
+      onClick={[Function]}
+    >
+      N
+    </div>
+    <div
+      className="sc-dlfnbm fLnLPx"
+      color="var(--adjective)"
+      fontSize={31.5}
+      onClick={[Function]}
+    >
+      A
+    </div>
+    <div
+      className="sc-dlfnbm ZTAld"
+      color="var(--verb)"
+      fontSize={31.5}
+      onClick={[Function]}
+    >
+      V
+    </div>
+  </div>
   <button
     className="sc-gsTCUz hwVgqy"
     type="submit"

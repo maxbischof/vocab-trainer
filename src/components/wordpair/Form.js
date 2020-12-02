@@ -2,7 +2,7 @@ import React, { createRef, useState } from 'react'
 import styled from 'styled-components'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
-import GrammarMenu from './GrammarMenu'
+import GrammarMenu from '../grammarmenu/GrammarMenu'
 
 export default function Form({ wordPairs, setWordPairs }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })

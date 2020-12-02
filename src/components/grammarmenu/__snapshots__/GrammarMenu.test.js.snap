@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-gsTCUz jBFAUf"
+>
+  <div
+    className="sc-bdfBwQ klFbRb"
+    color="var(--noun)"
+    fontSize={31.5}
+    onClick={[Function]}
+  >
+    N
+  </div>
+  <div
+    className="sc-bdfBwQ cQXCMy"
+    color="var(--adjective)"
+    fontSize={31.5}
+    onClick={[Function]}
+  >
+    A
+  </div>
+  <div
+    className="sc-bdfBwQ emUPPW"
+    color="var(--verb)"
+    fontSize={31.5}
+    onClick={[Function]}
+  >
+    V
+  </div>
+</div>
+`;

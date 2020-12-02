@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-jrAGrp fhTUFE"
+  className="sc-iqHYGH ealjLC"
 >
   <h1>
     Test erstellen
   </h1>
   <form
-    className="sc-fubCfw gSIPsU"
+    className="sc-jrAGrp fGVGMH"
     onSubmit={[Function]}
   >
     <input
@@ -27,6 +27,58 @@ exports[`renders correctly 1`] = `
       type="text"
       value=""
     />
+    <div
+      className="sc-fubCfw hgAJQE"
+      color="var(--masculine)"
+      fontSize={21.5}
+      onClick={[Function]}
+    >
+      m
+    </div>
+    <div
+      className="sc-fubCfw iMsKdE"
+      color="var(--feminine)"
+      fontSize={21.5}
+      onClick={[Function]}
+    >
+      f
+    </div>
+    <div
+      className="sc-fubCfw dCgUGS"
+      color="var(--neuter)"
+      fontSize={21.5}
+      onClick={[Function]}
+    >
+      n
+    </div>
+    <div
+      className="sc-pFZIQ kfkMaf"
+    >
+      <div
+        className="sc-fubCfw uiObJ"
+        color="var(--noun)"
+        fontSize={31.5}
+        onClick={[Function]}
+      >
+        N
+      </div>
+      <div
+        className="sc-fubCfw fgOscp"
+        color="var(--adjective)"
+        fontSize={31.5}
+        onClick={[Function]}
+      >
+        A
+      </div>
+      <div
+        className="sc-fubCfw iwvAQl"
+        color="var(--verb)"
+        fontSize={31.5}
+        onClick={[Function]}
+      >
+        V
+      </div>
+    </div>
     <button
       className="sc-gsTCUz hwVgqy"
       type="submit"

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import CircleButton from './CircleButton'
+import AdjectiveMenu from './submenus/AdjectiveMenu'
+import NounMenu from './submenus/NounMenu'
+import VerbMenu from './submenus/VerbMenu'
 
 export default function GrammarSubMenus({
   wordClass,
@@ -12,135 +14,29 @@ export default function GrammarSubMenus({
   setNumber,
 }) {
   return (
-    <>
-      {wordClass === 'N' && (
-        <GrammarSubMenu>
-          <Column>
-            <CircleButton
-              text="m"
-              color="var(--masculine)"
-              diameter="43px"
-              activeProperty={gender}
-              onClick={setGender}
-            />
-            <CircleButton
-              text="f"
-              color="var(--feminine)"
-              diameter="43px"
-              activeProperty={gender}
-              onClick={setGender}
-            />
-            <CircleButton
-              text="n"
-              color="var(--neuter)"
-              diameter="43px"
-              activeProperty={gender}
-              onClick={setGender}
-            />
-          </Column>
-        </GrammarSubMenu>
-      )}
+    <GrammarSubMenu>
+      {wordClass === 'N' && <NounMenu gender={gender} setGender={setGender} />}
       {wordClass === 'A' && (
-        <GrammarSubMenu>
-          <Column>
-            <CircleButton
-              text="Sg"
-              active={false}
-              color="var(--singular)"
-              diameter="43px"
-              activeProperty={number}
-              onClick={setNumber}
-            />
-            <CircleButton
-              text="Pl"
-              active={false}
-              color="var(--plural)"
-              diameter="43px"
-              activeProperty={number}
-              onClick={setNumber}
-            />
-          </Column>
-          <Column>
-            <CircleButton
-              text="m"
-              active={false}
-              color="var(--masculine)"
-              diameter="43px"
-              activeProperty={gender}
-              onClick={setGender}
-            />
-            <CircleButton
-              text="f"
-              active={false}
-              color="var(--feminine)"
-              diameter="43px"
-              activeProperty={gender}
-              onClick={setGender}
-            />
-          </Column>
-        </GrammarSubMenu>
+        <AdjectiveMenu
+          gender={gender}
+          setGender={setGender}
+          number={number}
+          setNumber={setNumber}
+        />
       )}
       {wordClass === 'V' && (
-        <GrammarSubMenu>
-          <Column>
-            <CircleButton
-              text="Sg"
-              active={false}
-              color="var(--singular)"
-              diameter="43px"
-              activeProperty={number}
-              onClick={setNumber}
-            />
-            <CircleButton
-              text="Pl"
-              active={false}
-              color="var(--plural)"
-              diameter="43px"
-              activeProperty={number}
-              onClick={setNumber}
-            />
-          </Column>
-          <Column>
-            <CircleButton
-              text="1"
-              active={false}
-              color="var(--person)"
-              diameter="43px"
-              activeProperty={person}
-              onClick={setPerson}
-            />
-            <CircleButton
-              text="2"
-              active={false}
-              color="var(--person)"
-              diameter="43px"
-              activeProperty={person}
-              onClick={setPerson}
-            />
-            <CircleButton
-              text="3"
-              active={false}
-              color="var(--person)"
-              diameter="43px"
-              activeProperty={person}
-              onClick={setPerson}
-            />
-          </Column>
-        </GrammarSubMenu>
+        <VerbMenu
+          number={number}
+          setNumber={setNumber}
+          person={person}
+          setPerson={setPerson}
+        />
       )}
-    </>
+    </GrammarSubMenu>
   )
 }
 
 const GrammarSubMenu = styled.div`
   display: flex;
   height: 209px;
-`
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 15px 15px;
-  width: 63px;
 `

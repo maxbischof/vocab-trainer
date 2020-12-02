@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-dQppl cSyhzl"
+  className="sc-kstrdz ldpClA"
 >
   <h1>
     Test erstellen
   </h1>
   <form
-    className="sc-iqHYGH bQkWaJ"
+    className="sc-dQppl gzahQe"
     onSubmit={[Function]}
   >
     <input
@@ -28,7 +28,7 @@ exports[`renders correctly 1`] = `
       value=""
     />
     <div
-      className="sc-pFZIQ mxfyr"
+      className="sc-iqHYGH dmAJnF"
     >
       <div
         className="sc-jrAGrp dwsgCp"
@@ -60,7 +60,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="sc-kEjbxe hLcugI"
+      className="sc-crrsfI jSXxTk"
     >
       <div
         className="sc-fubCfw cZCdYp"

@@ -1,14 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Selection({ text, active, color, diameter, onClick }) {
+export default function Selection({
+  text,
+  activeProperty,
+  color,
+  diameter,
+  onClick,
+}) {
   const activeColor = color.substring(0, color.length - 2) + '0.44)'
   const borderSize = (parseInt(diameter) * 1.5 - parseInt(diameter)) / 2
   const fontSize = parseInt(diameter) / 2
 
   return (
     <Circle
-      active={active}
+      active={activeProperty === text ? true : false}
       color={color}
       activeColor={activeColor}
       diameter={diameter}

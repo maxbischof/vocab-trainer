@@ -3,18 +3,31 @@ import styled from 'styled-components'
 import GrammarSubMenu from './GrammarSubMenu'
 import Selection from './Selection'
 
-export default function GrammarMenu() {
-  const [wordClass, setWordClass] = useState('N')
-
+export default function GrammarMenu({
+  wordClass,
+  setWordClass,
+  gender,
+  setGender,
+  person,
+  setPerson,
+  number,
+  setNumber,
+}) {
   return (
     <>
-      {wordClass === 'N' && <GrammarSubMenu wordClass={wordClass} />}
-      {wordClass === 'A' && <GrammarSubMenu wordClass={wordClass} />}
-      {wordClass === 'V' && <GrammarSubMenu wordClass={wordClass} />}
+      <GrammarSubMenu
+        wordClass={wordClass}
+        gender={gender}
+        setGender={setGender}
+        person={person}
+        setPerson={setPerson}
+        number={number}
+        setNumber={setNumber}
+      />
       <StyledGrammarMenu>
         <Selection
           text="N"
-          active={false}
+          activeProperty={wordClass}
           color="rgba(43, 173, 134, 1)"
           diameter="63px"
           onClick={setWordClass}
@@ -22,7 +35,7 @@ export default function GrammarMenu() {
 
         <Selection
           text="A"
-          active={false}
+          activeProperty={wordClass}
           color="rgba(255, 51, 210, 1)"
           diameter="63px"
           onClick={setWordClass}
@@ -30,7 +43,7 @@ export default function GrammarMenu() {
 
         <Selection
           text="V"
-          active={false}
+          activeProperty={wordClass}
           color="rgba(255, 222, 51, 1)"
           diameter="63px"
           onClick={setWordClass}

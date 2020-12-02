@@ -6,6 +6,11 @@ import GrammarMenu from './GrammarMenu'
 
 export default function Form({ wordPairs, setWordPairs }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
+  const [wordClass, setWordClass] = useState('N')
+  const [gender, setGender] = useState()
+  const [person, setPerson] = useState()
+  const [number, setNumber] = useState()
+
   const foreignInput = createRef()
 
   function onSubmit(event) {
@@ -41,7 +46,16 @@ export default function Form({ wordPairs, setWordPairs }) {
         onChange={onChange}
         value={formInput.native}
       />
-      <GrammarMenu />
+      <GrammarMenu
+        wordClass={wordClass}
+        setWordClass={setWordClass}
+        gender={gender}
+        setGender={setGender}
+        person={person}
+        setPerson={setPerson}
+        number={number}
+        setNumber={setNumber}
+      />
       <Button type="submit">Add word</Button>
     </StyledForm>
   )

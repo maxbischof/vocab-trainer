@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-fubCfw gSIPsU"
+  className="sc-gKsewC iyHWhF"
   onSubmit={[Function]}
 >
   <input
@@ -22,10 +22,10 @@ exports[`renders correctly 1`] = `
     value=""
   />
   <div
-    className="sc-gKsewC clPmPh"
+    className="sc-eCssSg fWqgnd"
   >
     <div
-      className="sc-eCssSg iJGXuX"
+      className="sc-hKgILt cUPCrc"
     >
       <div
         className="sc-dlfnbm LYUzu"
@@ -54,7 +54,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-iBPRYJ PASjN"
+    className="sc-jSgupP jcHdEI"
   >
     <div
       className="sc-dlfnbm fZOfdF"

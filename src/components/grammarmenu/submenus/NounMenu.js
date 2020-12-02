@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import CircleButton from '../CircleButton'
+import Column from './Column'
 
 export default function NounMenu({ gender, setGender }) {
   return (
@@ -29,11 +29,3 @@ export default function NounMenu({ gender, setGender }) {
     </Column>
   )
 }
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 15px 15px;
-  width: 63px;
-`

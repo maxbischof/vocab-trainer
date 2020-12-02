@@ -14,29 +14,31 @@ export default function GrammarSubMenus({
   return (
     <>
       {wordClass === 'N' && (
-        <>
-          <Selection
-            text="m"
-            color="var(--masculine)"
-            diameter="43px"
-            activeProperty={gender}
-            onClick={setGender}
-          />
-          <Selection
-            text="f"
-            color="var(--feminine)"
-            diameter="43px"
-            activeProperty={gender}
-            onClick={setGender}
-          />
-          <Selection
-            text="n"
-            color="var(--neuter)"
-            diameter="43px"
-            activeProperty={gender}
-            onClick={setGender}
-          />
-        </>
+        <GrammarSubMenu>
+          <Column>
+            <Selection
+              text="m"
+              color="var(--masculine)"
+              diameter="43px"
+              activeProperty={gender}
+              onClick={setGender}
+            />
+            <Selection
+              text="f"
+              color="var(--feminine)"
+              diameter="43px"
+              activeProperty={gender}
+              onClick={setGender}
+            />
+            <Selection
+              text="n"
+              color="var(--neuter)"
+              diameter="43px"
+              activeProperty={gender}
+              onClick={setGender}
+            />
+          </Column>
+        </GrammarSubMenu>
       )}
       {wordClass === 'A' && (
         <GrammarSubMenu>

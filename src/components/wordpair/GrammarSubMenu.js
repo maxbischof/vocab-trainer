@@ -16,21 +16,21 @@ export default function GrammarSubMenu({
         <>
           <Selection
             text="m"
-            color="rgba(255, 51, 210, 1)"
+            color="var(--masculine)"
             diameter="43px"
             activeProperty={gender}
             onClick={setGender}
           />
           <Selection
             text="f"
-            color="rgba(255, 51, 210, 1)"
+            color="var(--feminine)"
             diameter="43px"
             activeProperty={gender}
             onClick={setGender}
           />
           <Selection
             text="n"
-            color="rgba(255, 51, 210, 1)"
+            color="var(--neuter)"
             diameter="43px"
             activeProperty={gender}
             onClick={setGender}
@@ -42,7 +42,7 @@ export default function GrammarSubMenu({
           <Selection
             text="Sg"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--singular)"
             diameter="43px"
             activeProperty={number}
             onClick={setNumber}
@@ -50,7 +50,7 @@ export default function GrammarSubMenu({
           <Selection
             text="Pl"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--plural)"
             diameter="43px"
             activeProperty={number}
             onClick={setNumber}
@@ -58,7 +58,7 @@ export default function GrammarSubMenu({
           <Selection
             text="m"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--masculine)"
             diameter="43px"
             activeProperty={gender}
             onClick={setGender}
@@ -66,7 +66,7 @@ export default function GrammarSubMenu({
           <Selection
             text="f"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--feminine)"
             diameter="43px"
             activeProperty={gender}
             onClick={setGender}
@@ -78,7 +78,7 @@ export default function GrammarSubMenu({
           <Selection
             text="Sg"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--singular)"
             diameter="43px"
             activeProperty={number}
             onClick={setNumber}
@@ -86,7 +86,7 @@ export default function GrammarSubMenu({
           <Selection
             text="Pl"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--plural)"
             diameter="43px"
             activeProperty={number}
             onClick={setNumber}
@@ -94,7 +94,7 @@ export default function GrammarSubMenu({
           <Selection
             text="1"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--person)"
             diameter="43px"
             activeProperty={person}
             onClick={setPerson}
@@ -102,7 +102,7 @@ export default function GrammarSubMenu({
           <Selection
             text="2"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--person)"
             diameter="43px"
             activeProperty={person}
             onClick={setPerson}
@@ -110,7 +110,7 @@ export default function GrammarSubMenu({
           <Selection
             text="3"
             active={false}
-            color="rgba(255, 51, 210, 1)"
+            color="var(--person)"
             diameter="43px"
             activeProperty={person}
             onClick={setPerson}

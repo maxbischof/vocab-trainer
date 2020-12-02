@@ -28,7 +28,7 @@ export default function GrammarMenu({
         <Selection
           text="N"
           activeProperty={wordClass}
-          color="rgba(43, 173, 134, 1)"
+          color="var(--noun)"
           diameter="63px"
           onClick={setWordClass}
         />
@@ -36,7 +36,7 @@ export default function GrammarMenu({
         <Selection
           text="A"
           activeProperty={wordClass}
-          color="rgba(255, 51, 210, 1)"
+          color="var(--adjective)"
           diameter="63px"
           onClick={setWordClass}
         />
@@ -44,7 +44,7 @@ export default function GrammarMenu({
         <Selection
           text="V"
           activeProperty={wordClass}
-          color="rgba(255, 222, 51, 1)"
+          color="var(--verb)"
           diameter="63px"
           onClick={setWordClass}
         />

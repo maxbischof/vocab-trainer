@@ -8,7 +8,6 @@ export default function Selection({
   diameter,
   onClick,
 }) {
-  const activeColor = color.substring(0, color.length - 2) + '0.44)'
   const borderSize = (parseInt(diameter) * 1.5 - parseInt(diameter)) / 2
   const fontSize = parseInt(diameter) / 2
 
@@ -16,7 +15,6 @@ export default function Selection({
     <Circle
       active={activeProperty === text ? true : false}
       color={color}
-      activeColor={activeColor}
       diameter={diameter}
       borderSize={borderSize}
       fontSize={fontSize}
@@ -31,7 +29,7 @@ const Circle = styled.div`
   height: ${(props) => props.diameter};
   width: ${(props) => props.diameter};
   margin: 5px 0;
-  background-color: ${(props) => props.color};
+  background-color: rgba(${(props) => props.color}, 1);
   border-radius: 50%;
   display: inline-block;
   display: grid;
@@ -42,7 +40,7 @@ const Circle = styled.div`
   background-clip: padding-box;
   border: ${(props) =>
     props.active
-      ? props.borderSize + 'px solid ' + props.activeColor + ';'
+      ? props.borderSize + 'px solid rgba(' + props.color + ', 0.44);'
       : ''};
   cursor: pointer;
 `

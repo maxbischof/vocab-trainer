@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Selection({
+export default function CircleButton({
   text,
   activeProperty,
   color,

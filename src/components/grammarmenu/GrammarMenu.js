@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import GrammarSubMenus from './GrammarSubMenus'
-import Selection from './Selection'
+import CircleButton from './CircleButton'
 
 export default function GrammarMenu({
   wordClass,
@@ -25,7 +25,7 @@ export default function GrammarMenu({
         setNumber={setNumber}
       />
       <StyledGrammarMenu>
-        <Selection
+        <CircleButton
           text="N"
           activeProperty={wordClass}
           color="var(--noun)"
@@ -33,7 +33,7 @@ export default function GrammarMenu({
           onClick={setWordClass}
         />
 
-        <Selection
+        <CircleButton
           text="A"
           activeProperty={wordClass}
           color="var(--adjective)"
@@ -41,7 +41,7 @@ export default function GrammarMenu({
           onClick={setWordClass}
         />
 
-        <Selection
+        <CircleButton
           text="V"
           activeProperty={wordClass}
           color="var(--verb)"

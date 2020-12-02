@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-iqHYGH ealjLC"
+  className="sc-dQppl cSyhzl"
 >
   <h1>
     Test erstellen
   </h1>
   <form
-    className="sc-jrAGrp fGVGMH"
+    className="sc-iqHYGH bQkWaJ"
     onSubmit={[Function]}
   >
     <input
@@ -28,34 +28,42 @@ exports[`renders correctly 1`] = `
       value=""
     />
     <div
-      className="sc-fubCfw hgAJQE"
-      color="var(--masculine)"
-      fontSize={21.5}
-      onClick={[Function]}
-    >
-      m
-    </div>
-    <div
-      className="sc-fubCfw iMsKdE"
-      color="var(--feminine)"
-      fontSize={21.5}
-      onClick={[Function]}
-    >
-      f
-    </div>
-    <div
-      className="sc-fubCfw dCgUGS"
-      color="var(--neuter)"
-      fontSize={21.5}
-      onClick={[Function]}
-    >
-      n
-    </div>
-    <div
-      className="sc-pFZIQ kfkMaf"
+      className="sc-pFZIQ mxfyr"
     >
       <div
-        className="sc-fubCfw uiObJ"
+        className="sc-jrAGrp dwsgCp"
+      >
+        <div
+          className="sc-fubCfw fYNuti"
+          color="var(--masculine)"
+          fontSize={21.5}
+          onClick={[Function]}
+        >
+          m
+        </div>
+        <div
+          className="sc-fubCfw gDpyfe"
+          color="var(--feminine)"
+          fontSize={21.5}
+          onClick={[Function]}
+        >
+          f
+        </div>
+        <div
+          className="sc-fubCfw NlhyU"
+          color="var(--neuter)"
+          fontSize={21.5}
+          onClick={[Function]}
+        >
+          n
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-kEjbxe hLcugI"
+    >
+      <div
+        className="sc-fubCfw cZCdYp"
         color="var(--noun)"
         fontSize={31.5}
         onClick={[Function]}
@@ -63,7 +71,7 @@ exports[`renders correctly 1`] = `
         N
       </div>
       <div
-        className="sc-fubCfw fgOscp"
+        className="sc-fubCfw gCDOfH"
         color="var(--adjective)"
         fontSize={31.5}
         onClick={[Function]}
@@ -71,7 +79,7 @@ exports[`renders correctly 1`] = `
         A
       </div>
       <div
-        className="sc-fubCfw iwvAQl"
+        className="sc-fubCfw bNrrpL"
         color="var(--verb)"
         fontSize={31.5}
         onClick={[Function]}

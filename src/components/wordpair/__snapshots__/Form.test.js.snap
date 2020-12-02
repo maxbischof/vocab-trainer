@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-eCssSg eaqvYF"
+  className="sc-gKsewC iyHWhF"
   onSubmit={[Function]}
 >
   <input
@@ -22,34 +22,42 @@ exports[`renders correctly 1`] = `
     value=""
   />
   <div
-    className="sc-dlfnbm foNBOQ"
-    color="var(--masculine)"
-    fontSize={21.5}
-    onClick={[Function]}
-  >
-    m
-  </div>
-  <div
-    className="sc-dlfnbm cDrnI"
-    color="var(--feminine)"
-    fontSize={21.5}
-    onClick={[Function]}
-  >
-    f
-  </div>
-  <div
-    className="sc-dlfnbm ddaete"
-    color="var(--neuter)"
-    fontSize={21.5}
-    onClick={[Function]}
-  >
-    n
-  </div>
-  <div
-    className="sc-hKgILt gqydTq"
+    className="sc-hKgILt hXxsRe"
   >
     <div
-      className="sc-dlfnbm iAePyl"
+      className="sc-eCssSg iJGXuX"
+    >
+      <div
+        className="sc-dlfnbm LYUzu"
+        color="var(--masculine)"
+        fontSize={21.5}
+        onClick={[Function]}
+      >
+        m
+      </div>
+      <div
+        className="sc-dlfnbm grZBkS"
+        color="var(--feminine)"
+        fontSize={21.5}
+        onClick={[Function]}
+      >
+        f
+      </div>
+      <div
+        className="sc-dlfnbm CSOXE"
+        color="var(--neuter)"
+        fontSize={21.5}
+        onClick={[Function]}
+      >
+        n
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jSgupP jcHdEI"
+  >
+    <div
+      className="sc-dlfnbm fZOfdF"
       color="var(--noun)"
       fontSize={31.5}
       onClick={[Function]}
@@ -57,7 +65,7 @@ exports[`renders correctly 1`] = `
       N
     </div>
     <div
-      className="sc-dlfnbm fLnLPx"
+      className="sc-dlfnbm jgoQez"
       color="var(--adjective)"
       fontSize={31.5}
       onClick={[Function]}
@@ -65,7 +73,7 @@ exports[`renders correctly 1`] = `
       A
     </div>
     <div
-      className="sc-dlfnbm ZTAld"
+      className="sc-dlfnbm fVijUf"
       color="var(--verb)"
       fontSize={31.5}
       onClick={[Function]}

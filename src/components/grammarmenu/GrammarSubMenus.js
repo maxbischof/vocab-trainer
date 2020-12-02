@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Selection from './Selection'
+import CircleButton from './CircleButton'
 
 export default function GrammarSubMenus({
   wordClass,
@@ -16,21 +16,21 @@ export default function GrammarSubMenus({
       {wordClass === 'N' && (
         <GrammarSubMenu>
           <Column>
-            <Selection
+            <CircleButton
               text="m"
               color="var(--masculine)"
               diameter="43px"
               activeProperty={gender}
               onClick={setGender}
             />
-            <Selection
+            <CircleButton
               text="f"
               color="var(--feminine)"
               diameter="43px"
               activeProperty={gender}
               onClick={setGender}
             />
-            <Selection
+            <CircleButton
               text="n"
               color="var(--neuter)"
               diameter="43px"
@@ -43,7 +43,7 @@ export default function GrammarSubMenus({
       {wordClass === 'A' && (
         <GrammarSubMenu>
           <Column>
-            <Selection
+            <CircleButton
               text="Sg"
               active={false}
               color="var(--singular)"
@@ -51,7 +51,7 @@ export default function GrammarSubMenus({
               activeProperty={number}
               onClick={setNumber}
             />
-            <Selection
+            <CircleButton
               text="Pl"
               active={false}
               color="var(--plural)"
@@ -61,7 +61,7 @@ export default function GrammarSubMenus({
             />
           </Column>
           <Column>
-            <Selection
+            <CircleButton
               text="m"
               active={false}
               color="var(--masculine)"
@@ -69,7 +69,7 @@ export default function GrammarSubMenus({
               activeProperty={gender}
               onClick={setGender}
             />
-            <Selection
+            <CircleButton
               text="f"
               active={false}
               color="var(--feminine)"
@@ -83,7 +83,7 @@ export default function GrammarSubMenus({
       {wordClass === 'V' && (
         <GrammarSubMenu>
           <Column>
-            <Selection
+            <CircleButton
               text="Sg"
               active={false}
               color="var(--singular)"
@@ -91,7 +91,7 @@ export default function GrammarSubMenus({
               activeProperty={number}
               onClick={setNumber}
             />
-            <Selection
+            <CircleButton
               text="Pl"
               active={false}
               color="var(--plural)"
@@ -101,7 +101,7 @@ export default function GrammarSubMenus({
             />
           </Column>
           <Column>
-            <Selection
+            <CircleButton
               text="1"
               active={false}
               color="var(--person)"
@@ -109,7 +109,7 @@ export default function GrammarSubMenus({
               activeProperty={person}
               onClick={setPerson}
             />
-            <Selection
+            <CircleButton
               text="2"
               active={false}
               color="var(--person)"
@@ -117,7 +117,7 @@ export default function GrammarSubMenus({
               activeProperty={person}
               onClick={setPerson}
             />
-            <Selection
+            <CircleButton
               text="3"
               active={false}
               color="var(--person)"

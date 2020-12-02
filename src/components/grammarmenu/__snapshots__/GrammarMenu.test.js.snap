@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-gsTCUz jBFAUf"
+  className="sc-hKgILt jQZXli"
 >
   <div
-    className="sc-bdfBwQ klFbRb"
+    className="sc-bdfBwQ iJftcN"
     color="var(--noun)"
     fontSize={31.5}
     onClick={[Function]}
@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
     N
   </div>
   <div
-    className="sc-bdfBwQ cQXCMy"
+    className="sc-bdfBwQ kKnlhg"
     color="var(--adjective)"
     fontSize={31.5}
     onClick={[Function]}
@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
     A
   </div>
   <div
-    className="sc-bdfBwQ emUPPW"
+    className="sc-bdfBwQ gYGyJk"
     color="var(--verb)"
     fontSize={31.5}
     onClick={[Function]}

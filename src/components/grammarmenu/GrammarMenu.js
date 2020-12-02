@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import GrammarSubMenu from './GrammarSubMenu'
+import GrammarSubMenus from './GrammarSubMenus'
 import Selection from './Selection'
 
 export default function GrammarMenu({
@@ -15,7 +15,7 @@ export default function GrammarMenu({
 }) {
   return (
     <>
-      <GrammarSubMenu
+      <GrammarSubMenus
         wordClass={wordClass}
         gender={gender}
         setGender={setGender}
@@ -56,6 +56,8 @@ export default function GrammarMenu({
 const StyledGrammarMenu = styled.div`
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  height: 93px;
   width: 95vw;
   max-width: 400px;
 `

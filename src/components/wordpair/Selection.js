@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Selection({ text, active, color, diameter }) {
+export default function Selection({ text, active, color, diameter, onClick }) {
   const activeColor = color.substring(0, color.length - 2) + '0.44)'
   const borderSize = (parseInt(diameter) * 1.5 - parseInt(diameter)) / 2
   const fontSize = parseInt(diameter) / 2
@@ -14,6 +14,7 @@ export default function Selection({ text, active, color, diameter }) {
       diameter={diameter}
       borderSize={borderSize}
       fontSize={fontSize}
+      onClick={() => onClick(text)}
     >
       {text}
     </Circle>
@@ -23,6 +24,7 @@ export default function Selection({ text, active, color, diameter }) {
 const Circle = styled.div`
   height: ${(props) => props.diameter};
   width: ${(props) => props.diameter};
+  margin: 5px 0;
   background-color: ${(props) => props.color};
   border-radius: 50%;
   display: inline-block;

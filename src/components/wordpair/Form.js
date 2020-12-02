@@ -2,6 +2,7 @@ import React, { createRef, useState } from 'react'
 import styled from 'styled-components'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
+import GrammarMenu from './GrammarMenu'
 
 export default function Form({ wordPairs, setWordPairs }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
@@ -40,6 +41,7 @@ export default function Form({ wordPairs, setWordPairs }) {
         onChange={onChange}
         value={formInput.native}
       />
+      <GrammarMenu />
       <Button type="submit">Add word</Button>
     </StyledForm>
   )

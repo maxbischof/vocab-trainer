@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     Test erstellen
   </h1>
   <form
-    className="sc-fubCfw hIgeyN"
+    className="sc-fubCfw gSIPsU"
     onSubmit={[Function]}
   >
     <input

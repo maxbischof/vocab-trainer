@@ -49,7 +49,5 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--text);
-  border-radius: 10px;
   padding: 10px;
 `

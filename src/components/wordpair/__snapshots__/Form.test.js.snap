@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-dlfnbm eFjHGB"
+  className="sc-dlfnbm fmdqsI"
   onSubmit={[Function]}
 >
   <input

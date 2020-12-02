@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-gsTCUz jFLqyv"
+>
+  <div
+    className="sc-bdfBwQ kHvxbh"
+    color="rgba(43, 173, 134, 1)"
+  >
+    N
+  </div>
+  <div
+    className="sc-bdfBwQ hAAhKk"
+    color="rgba(255, 51, 210, 1)"
+  >
+    A
+  </div>
+  <div
+    className="sc-bdfBwQ kRfAAJ"
+    color="rgba(255, 222, 51, 1)"
+  >
+    V
+  </div>
+</div>
+`;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import GrammarSubMenu from './GrammarSubMenu'
 import Selection from './Selection'
@@ -57,4 +57,5 @@ const StyledGrammarMenu = styled.div`
   display: flex;
   justify-content: space-around;
   width: 95vw;
+  max-width: 400px;
 `

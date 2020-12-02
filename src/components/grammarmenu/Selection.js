@@ -41,6 +41,7 @@ const Circle = styled.div`
   border: ${(props) =>
     props.active
       ? props.borderSize + 'px solid rgba(' + props.color + ', 0.44);'
-      : ''};
+      : '0px solid white'};
   cursor: pointer;
+  transition: border 0.5s;
 `

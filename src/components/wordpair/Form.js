@@ -6,7 +6,7 @@ import GrammarMenu from '../grammarmenu/GrammarMenu'
 
 export default function Form({ wordPairs, setWordPairs }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
-  const [wordClass, setWordClass] = useState('N')
+  const [wordClass, setWordClass] = useState()
   const [gender, setGender] = useState()
   const [person, setPerson] = useState()
   const [number, setNumber] = useState()

@@ -29,7 +29,7 @@ export default function GrammarMenu({
           text="N"
           activeProperty={wordClass}
           color="var(--noun)"
-          diameter="63px"
+          diameter="109.24px"
           onClick={setWordClass}
         />
 
@@ -37,7 +37,7 @@ export default function GrammarMenu({
           text="A"
           activeProperty={wordClass}
           color="var(--adjective)"
-          diameter="63px"
+          diameter="109.24px"
           onClick={setWordClass}
         />
 
@@ -45,7 +45,7 @@ export default function GrammarMenu({
           text="V"
           activeProperty={wordClass}
           color="var(--verb)"
-          diameter="63px"
+          diameter="109.24px"
           onClick={setWordClass}
         />
       </StyledGrammarMenu>
@@ -54,10 +54,19 @@ export default function GrammarMenu({
 }
 
 const StyledGrammarMenu = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 93px;
-  width: 95vw;
-  max-width: 400px;
+  position: relative;
+  background-color: white;
+
+  > div {
+    position: absolute;
+  }
+
+  > :nth-child(2) {
+    top: 92px;
+  }
+
+  > :nth-child(3) {
+    top: 49.74px;
+    left: -75px;
+  }
 `

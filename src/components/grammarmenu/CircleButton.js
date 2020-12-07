@@ -28,8 +28,7 @@ export default function CircleButton({
 const Circle = styled.div`
   height: ${(props) => props.diameter};
   width: ${(props) => props.diameter};
-  margin: 5px 0;
-  background-color: rgba(${(props) => props.color}, 1);
+  background-color: rgba(${(props) => props.color}, 0.8);
   border-radius: 50%;
   display: inline-block;
   display: grid;
@@ -38,10 +37,5 @@ const Circle = styled.div`
   font-weight: 700;
   font-size: ${(props) => props.fontSize + 'px'};
   background-clip: padding-box;
-  border: ${(props) =>
-    props.active
-      ? props.borderSize + 'px solid rgba(' + props.color + ', 0.44);'
-      : '0px solid white'};
   cursor: pointer;
-  transition: border 0.5s;
 `

@@ -62,11 +62,12 @@ const StyledGrammarMenu = styled.div`
   }
 
   > :nth-child(2) {
-    top: 92px;
+    /* transform: rotate($rot * 1deg) translate($circle-size / 2)
+      rotate($rot * -1deg); */
+    transform: rotate(60deg) translate(100px) rotate(-60deg);
   }
 
   > :nth-child(3) {
-    top: 49.74px;
-    left: -75px;
+    transform: rotate(120deg) translate(100px) rotate(-120deg);
   }
 `

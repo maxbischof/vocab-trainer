@@ -24,7 +24,7 @@ export default function GrammarMenu({
         number={number}
         setNumber={setNumber}
       />
-      <StyledGrammarMenu>
+      <StyledGrammarMenu activeButton={wordClass}>
         <CircleButton
           text="N"
           activeProperty={wordClass}
@@ -59,15 +59,24 @@ const StyledGrammarMenu = styled.div`
 
   > div {
     position: absolute;
+    transition: 1s all;
+  }
+
+  > :nth-child(1) {
+    ${(props) =>
+      props.activeButton !== 'N' && props.activeButton && 'display: none;'}
+    ${(props) => !props.activeButton && 'transform: translate(0px, -42.5px);'}
   }
 
   > :nth-child(2) {
-    /* transform: rotate($rot * 1deg) translate($circle-size / 2)
-      rotate($rot * -1deg); */
-    transform: rotate(60deg) translate(100px) rotate(-60deg);
+    ${(props) =>
+      props.activeButton !== 'A' && props.activeButton && 'display: none;'}
+    ${(props) => !props.activeButton && 'transform: translate(50px, 42.5px);'}
   }
 
   > :nth-child(3) {
-    transform: rotate(120deg) translate(100px) rotate(-120deg);
+    ${(props) =>
+      props.activeButton !== 'V' && props.activeButton && 'display: none;'}
+    ${(props) => !props.activeButton && 'transform: translate(-50px, 42.5px);'}
   }
 `

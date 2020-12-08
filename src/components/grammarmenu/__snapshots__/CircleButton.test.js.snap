@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-bdfBwQ gzqLWh"
+  className="sc-bdfBwQ fFnOqh"
   color="rgba(43, 173, 134, 1)"
   fontSize={NaN}
   onClick={[Function]}

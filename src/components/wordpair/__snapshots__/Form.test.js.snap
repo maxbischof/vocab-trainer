@@ -5,6 +5,12 @@ exports[`renders correctly 1`] = `
   className="sc-pFZIQ inBTuX"
   onSubmit={[Function]}
 >
+  <svg
+    className="sc-jrAGrp hPKsmc"
+    onClick={[Function]}
+  >
+    wordClass.svg
+  </svg>
   <input
     className="sc-bdfBwQ hRYrgT"
     name="foreign"
@@ -21,41 +27,6 @@ exports[`renders correctly 1`] = `
     type="text"
     value=""
   />
-  <div
-    className="sc-fubCfw fZjUOc"
-  >
-    <div
-      className="sc-gKsewC diERPA"
-    />
-    <div
-      className="sc-iBPRYJ cBaiyV"
-    >
-      <div
-        className="sc-dlfnbm iojHUF"
-        color="var(--noun)"
-        fontSize={54.5}
-        onClick={[Function]}
-      >
-        N
-      </div>
-      <div
-        className="sc-dlfnbm iGTeoc"
-        color="var(--adjective)"
-        fontSize={54.5}
-        onClick={[Function]}
-      >
-        A
-      </div>
-      <div
-        className="sc-dlfnbm fdXhbA"
-        color="var(--verb)"
-        fontSize={54.5}
-        onClick={[Function]}
-      >
-        V
-      </div>
-    </div>
-  </div>
   <button
     className="sc-gsTCUz hwVgqy"
     type="submit"

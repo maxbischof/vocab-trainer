@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-hBEYos jlFbtW"
+  className="sc-fodVxV bFyUuZ"
 >
   <h1>
     Test erstellen
@@ -11,6 +11,12 @@ exports[`renders correctly 1`] = `
     className="sc-bqyKva iPBxZN"
     onSubmit={[Function]}
   >
+    <svg
+      className="sc-kstrdz dtpusM"
+      onClick={[Function]}
+    >
+      wordClass.svg
+    </svg>
     <input
       className="sc-iBPRYJ jxdMbx"
       name="foreign"
@@ -27,41 +33,6 @@ exports[`renders correctly 1`] = `
       type="text"
       value=""
     />
-    <div
-      className="sc-dQppl eiDhZm"
-    >
-      <div
-        className="sc-iqHYGH eCVtrs"
-      />
-      <div
-        className="sc-crrsfI jvIAEs"
-      >
-        <div
-          className="sc-fubCfw fCrBXh"
-          color="var(--noun)"
-          fontSize={54.5}
-          onClick={[Function]}
-        >
-          N
-        </div>
-        <div
-          className="sc-fubCfw hARJCw"
-          color="var(--adjective)"
-          fontSize={54.5}
-          onClick={[Function]}
-        >
-          A
-        </div>
-        <div
-          className="sc-fubCfw gQvqCI"
-          color="var(--verb)"
-          fontSize={54.5}
-          onClick={[Function]}
-        >
-          V
-        </div>
-      </div>
-    </div>
     <button
       className="sc-gsTCUz hwVgqy"
       type="submit"

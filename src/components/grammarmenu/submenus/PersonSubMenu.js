@@ -6,21 +6,21 @@ export default function PersonSubMenu({ person, setPerson, color }) {
   return (
     <StyledPersonSubMenu>
       <CircleButton
-        text="1."
+        text="1. Person"
         color={color}
         diameter="56px"
         activeProperty={person}
         onClick={setPerson}
       />
       <CircleButton
-        text="2."
+        text="2. Person"
         color={color}
         diameter="56px"
         activeProperty={person}
         onClick={setPerson}
       />
       <CircleButton
-        text="3."
+        text="3. Person"
         color={color}
         diameter="56px"
         activeProperty={person}

@@ -26,7 +26,7 @@ export default function GrammarMenu({
       />
       <StyledGrammarMenu activeButton={wordClass}>
         <CircleButton
-          text="N"
+          text="Substantiv"
           activeProperty={wordClass}
           color="var(--noun)"
           diameter="109.24px"
@@ -34,7 +34,7 @@ export default function GrammarMenu({
         />
 
         <CircleButton
-          text="A"
+          text="Adjektiv"
           activeProperty={wordClass}
           color="var(--adjective)"
           diameter="109.24px"
@@ -42,7 +42,7 @@ export default function GrammarMenu({
         />
 
         <CircleButton
-          text="V"
+          text="Verb"
           activeProperty={wordClass}
           color="var(--verb)"
           diameter="109.24px"
@@ -67,19 +67,23 @@ const StyledGrammarMenu = styled.div`
 
   > :nth-child(1) {
     ${(props) =>
-      props.activeButton !== 'N' && props.activeButton && 'display: none;'}
+      props.activeButton !== 'Substantiv' &&
+      props.activeButton &&
+      'display: none;'}
     ${(props) => !props.activeButton && 'transform: translate(0px, -42.5px);'}
   }
 
   > :nth-child(2) {
     ${(props) =>
-      props.activeButton !== 'A' && props.activeButton && 'display: none;'}
+      props.activeButton !== 'Adjektiv' &&
+      props.activeButton &&
+      'display: none;'}
     ${(props) => !props.activeButton && 'transform: translate(50px, 42.5px);'}
   }
 
   > :nth-child(3) {
     ${(props) =>
-      props.activeButton !== 'V' && props.activeButton && 'display: none;'}
+      props.activeButton !== 'Verb' && props.activeButton && 'display: none;'}
     ${(props) => !props.activeButton && 'transform: translate(-50px, 42.5px);'}
   }
 `

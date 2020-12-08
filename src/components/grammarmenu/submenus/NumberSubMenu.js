@@ -6,14 +6,14 @@ export default function NumberSubMenu({ number, setNumber, color }) {
   return (
     <StyledNumberSubMenu>
       <CircleButton
-        text="Sg"
+        text="Singular"
         color={color}
         diameter="56px"
         activeProperty={number}
         onClick={setNumber}
       />
       <CircleButton
-        text="Pl"
+        text="Plural"
         color={color}
         diameter="56px"
         activeProperty={number}

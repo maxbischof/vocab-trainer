@@ -6,21 +6,21 @@ export default function GenderSubMenu({ gender, setGender, color }) {
   return (
     <StyledGenderSubMenu>
       <CircleButton
-        text="m"
+        text="Maskulin"
         color={color}
         diameter="56px"
         activeProperty={gender}
         onClick={setGender}
       />
       <CircleButton
-        text="f"
+        text="Feminin"
         color={color}
         diameter="56px"
         activeProperty={gender}
         onClick={setGender}
       />
       <CircleButton
-        text="n"
+        text="Neutrum"
         color={color}
         diameter="56px"
         activeProperty={gender}

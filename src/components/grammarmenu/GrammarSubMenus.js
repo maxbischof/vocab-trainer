@@ -16,25 +16,25 @@ export default function GrammarSubMenus({
   const [color, setColor] = useState()
   useEffect(() => {
     const colors = {
-      N: 'var(--noun)',
-      A: 'var(--adjective)',
-      V: 'var(--verb)',
+      Substantiv: 'var(--noun)',
+      Adjektiv: 'var(--adjective)',
+      Verb: 'var(--verb)',
     }
     setColor(colors[wordClass])
   }, [wordClass])
 
   return (
     <StyledGrammarSubMenus>
-      {wordClass === 'N' && (
+      {wordClass === 'Substantiv' && (
         <GenderSubMenu gender={gender} setGender={setGender} color={color} />
       )}
-      {wordClass === 'A' && (
+      {wordClass === 'Adjektiv' && (
         <>
           <GenderSubMenu gender={gender} setGender={setGender} color={color} />
           <NumberSubMenu number={number} setNumber={setNumber} color={color} />
         </>
       )}
-      {wordClass === 'V' && (
+      {wordClass === 'Verb' && (
         <>
           <PersonSubMenu person={person} setPerson={setPerson} color={color} />
           <NumberSubMenu number={number} setNumber={setNumber} color={color} />

@@ -8,7 +8,7 @@ export default function CircleButton({
   diameter,
   onClick,
 }) {
-  const fontSize = parseInt(diameter) / 2
+  const fontSize = parseInt(diameter) / 6
   const active = activeProperty === text
 
   return (

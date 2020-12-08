@@ -33,29 +33,27 @@ export default function Form({ wordPairs, setWordPairs }) {
 
   return (
     <>
-      <div onClick={() => showGrammarMenu && setShowGrammarMenu(false)}>
-        <StyledForm onSubmit={onSubmit} isBlured={showGrammarMenu}>
-          <StyledWordClassSVG
-            onClick={() => setShowGrammarMenu(!showGrammarMenu)}
-          />
-          <Input
-            name="foreign"
-            type="text"
-            placeholder="Foreign"
-            onChange={onChange}
-            value={formInput.foreign}
-            ref={foreignInput}
-          />
-          <Input
-            name="native"
-            type="text"
-            placeholder="Native"
-            onChange={onChange}
-            value={formInput.native}
-          />
-          <Button type="submit">Add word</Button>
-        </StyledForm>
-      </div>
+      <StyledForm onSubmit={onSubmit} isBlured={showGrammarMenu}>
+        <StyledWordClassSVG
+          onClick={() => setShowGrammarMenu(!showGrammarMenu)}
+        />
+        <Input
+          name="foreign"
+          type="text"
+          placeholder="Foreign"
+          onChange={onChange}
+          value={formInput.foreign}
+          ref={foreignInput}
+        />
+        <Input
+          name="native"
+          type="text"
+          placeholder="Native"
+          onChange={onChange}
+          value={formInput.native}
+        />
+        <Button type="submit">Add word</Button>
+      </StyledForm>
       {showGrammarMenu && (
         <GrammarMenu
           wordClass={wordClass}
@@ -66,6 +64,7 @@ export default function Form({ wordPairs, setWordPairs }) {
           setPerson={setPerson}
           number={number}
           setNumber={setNumber}
+          setShowGrammarMenu={setShowGrammarMenu}
         />
       )}
     </>

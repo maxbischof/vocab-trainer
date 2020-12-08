@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import GrammarSubMenus from './GrammarSubMenus'
 import CircleButton from './CircleButton'
+import { ReactComponent as CloseIcon } from '../../icons/delete.svg'
 
 export default function GrammarMenu({
   wordClass,
@@ -12,9 +13,11 @@ export default function GrammarMenu({
   setPerson,
   number,
   setNumber,
+  setShowGrammarMenu,
 }) {
   return (
     <MenusWrapper>
+      <StyledCloseIcon onClick={() => setShowGrammarMenu(false)} />
       <GrammarSubMenus
         wordClass={wordClass}
         gender={gender}
@@ -90,5 +93,10 @@ const StyledGrammarMenu = styled.div`
 
 const MenusWrapper = styled.div`
   display: relative;
-  border: 1px solid red;
+`
+
+const StyledCloseIcon = styled(CloseIcon)`
+  transform: translate(120px, -120px);
+  cursor: pointer;
+  position: absolute;
 `

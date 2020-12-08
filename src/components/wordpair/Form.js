@@ -6,7 +6,7 @@ import GrammarMenu from '../grammarmenu/GrammarMenu'
 import { ReactComponent as WordClassSVG } from '../../icons/wordClass.svg'
 
 export default function Form({ wordPairs, setWordPairs }) {
-  const [showGrammerMenu, setShowGrammarMenu] = useState(false)
+  const [showGrammarMenu, setShowGrammarMenu] = useState(false)
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const [wordClass, setWordClass] = useState()
   const [gender, setGender] = useState()
@@ -33,28 +33,30 @@ export default function Form({ wordPairs, setWordPairs }) {
 
   return (
     <>
-      <StyledForm onSubmit={onSubmit} isBlured={showGrammerMenu}>
-        <StyledWordClassSVG
-          onClick={() => setShowGrammarMenu(!showGrammerMenu)}
-        />
-        <Input
-          name="foreign"
-          type="text"
-          placeholder="Foreign"
-          onChange={onChange}
-          value={formInput.foreign}
-          ref={foreignInput}
-        />
-        <Input
-          name="native"
-          type="text"
-          placeholder="Native"
-          onChange={onChange}
-          value={formInput.native}
-        />
-        <Button type="submit">Add word</Button>
-      </StyledForm>
-      {showGrammerMenu && (
+      <div onClick={() => showGrammarMenu && setShowGrammarMenu(false)}>
+        <StyledForm onSubmit={onSubmit} isBlured={showGrammarMenu}>
+          <StyledWordClassSVG
+            onClick={() => setShowGrammarMenu(!showGrammarMenu)}
+          />
+          <Input
+            name="foreign"
+            type="text"
+            placeholder="Foreign"
+            onChange={onChange}
+            value={formInput.foreign}
+            ref={foreignInput}
+          />
+          <Input
+            name="native"
+            type="text"
+            placeholder="Native"
+            onChange={onChange}
+            value={formInput.native}
+          />
+          <Button type="submit">Add word</Button>
+        </StyledForm>
+      </div>
+      {showGrammarMenu && (
         <GrammarMenu
           wordClass={wordClass}
           setWordClass={setWordClass}

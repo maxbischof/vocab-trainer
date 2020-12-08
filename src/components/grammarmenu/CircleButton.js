@@ -9,14 +9,15 @@ export default function CircleButton({
   onClick,
 }) {
   const fontSize = parseInt(diameter) / 2
+  const active = activeProperty === text
 
   return (
     <Circle
-      active={activeProperty === text ? true : false}
+      active={active}
       color={color}
       diameter={diameter}
       fontSize={fontSize}
-      onClick={() => onClick(text)}
+      onClick={() => (active ? onClick('') : onClick(text))}
     >
       {text}
     </Circle>

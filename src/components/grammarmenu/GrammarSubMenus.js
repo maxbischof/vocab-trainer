@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import AdjectiveMenu from './submenus/AdjectiveMenu'
-import NounMenu from './submenus/NounMenu'
-import VerbMenu from './submenus/VerbMenu'
+import GenderSubMenu from './submenus/GenderSubMenu'
+import NumberSubMenu from './submenus/NumberSubMenu'
+import PersonSubMenu from './submenus/PersonSubMenu'
 
 export default function GrammarSubMenus({
   wordClass,
@@ -13,30 +13,39 @@ export default function GrammarSubMenus({
   number,
   setNumber,
 }) {
+  const [color, setColor] = useState()
+  useEffect(() => {
+    const colors = {
+      N: 'var(--noun)',
+      A: 'var(--adjective)',
+      V: 'var(--verb)',
+    }
+    setColor(colors[wordClass])
+  }, [wordClass])
+
   return (
-    <GrammarSubMenu>
-      {wordClass === 'N' && <NounMenu gender={gender} setGender={setGender} />}
+    <StyledGrammarSubMenus>
+      {wordClass === 'N' && (
+        <GenderSubMenu gender={gender} setGender={setGender} color={color} />
+      )}
       {wordClass === 'A' && (
-        <AdjectiveMenu
-          gender={gender}
-          setGender={setGender}
-          number={number}
-          setNumber={setNumber}
-        />
+        <>
+          <GenderSubMenu gender={gender} setGender={setGender} color={color} />
+          <NumberSubMenu number={number} setNumber={setNumber} color={color} />
+        </>
       )}
       {wordClass === 'V' && (
-        <VerbMenu
-          number={number}
-          setNumber={setNumber}
-          person={person}
-          setPerson={setPerson}
-        />
+        <>
+          <PersonSubMenu person={person} setPerson={setPerson} color={color} />
+          <NumberSubMenu number={number} setNumber={setNumber} color={color} />
+        </>
       )}
-    </GrammarSubMenu>
+    </StyledGrammarSubMenus>
   )
 }
 
-const GrammarSubMenu = styled.div`
+const StyledGrammarSubMenus = styled.div`
   display: flex;
   height: 209px;
+  position: absolute;
 `

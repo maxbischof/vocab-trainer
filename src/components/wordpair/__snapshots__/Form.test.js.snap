@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-gKsewC iyHWhF"
+  className="sc-pFZIQ inBTuX"
   onSubmit={[Function]}
 >
   <input
@@ -22,63 +22,38 @@ exports[`renders correctly 1`] = `
     value=""
   />
   <div
-    className="sc-eCssSg fWqgnd"
+    className="sc-fubCfw fZjUOc"
   >
     <div
-      className="sc-hKgILt cUPCrc"
+      className="sc-gKsewC diERPA"
+    />
+    <div
+      className="sc-iBPRYJ cBaiyV"
     >
       <div
-        className="sc-dlfnbm LYUzu"
-        color="var(--masculine)"
-        fontSize={21.5}
+        className="sc-dlfnbm iojHUF"
+        color="var(--noun)"
+        fontSize={54.5}
         onClick={[Function]}
       >
-        m
+        N
       </div>
       <div
-        className="sc-dlfnbm grZBkS"
-        color="var(--feminine)"
-        fontSize={21.5}
+        className="sc-dlfnbm iGTeoc"
+        color="var(--adjective)"
+        fontSize={54.5}
         onClick={[Function]}
       >
-        f
+        A
       </div>
       <div
-        className="sc-dlfnbm CSOXE"
-        color="var(--neuter)"
-        fontSize={21.5}
+        className="sc-dlfnbm fdXhbA"
+        color="var(--verb)"
+        fontSize={54.5}
         onClick={[Function]}
       >
-        n
+        V
       </div>
-    </div>
-  </div>
-  <div
-    className="sc-jSgupP jcHdEI"
-  >
-    <div
-      className="sc-dlfnbm fZOfdF"
-      color="var(--noun)"
-      fontSize={31.5}
-      onClick={[Function]}
-    >
-      N
-    </div>
-    <div
-      className="sc-dlfnbm jgoQez"
-      color="var(--adjective)"
-      fontSize={31.5}
-      onClick={[Function]}
-    >
-      A
-    </div>
-    <div
-      className="sc-dlfnbm fVijUf"
-      color="var(--verb)"
-      fontSize={31.5}
-      onClick={[Function]}
-    >
-      V
     </div>
   </div>
   <button

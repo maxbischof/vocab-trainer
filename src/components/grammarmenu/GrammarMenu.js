@@ -14,7 +14,7 @@ export default function GrammarMenu({
   setNumber,
 }) {
   return (
-    <>
+    <MenusWrapper>
       <GrammarSubMenus
         wordClass={wordClass}
         gender={gender}
@@ -49,13 +49,16 @@ export default function GrammarMenu({
           onClick={setWordClass}
         />
       </StyledGrammarMenu>
-    </>
+    </MenusWrapper>
   )
 }
 
 const StyledGrammarMenu = styled.div`
   position: relative;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   > div {
     position: absolute;
@@ -79,4 +82,9 @@ const StyledGrammarMenu = styled.div`
       props.activeButton !== 'V' && props.activeButton && 'display: none;'}
     ${(props) => !props.activeButton && 'transform: translate(-50px, 42.5px);'}
   }
+`
+
+const MenusWrapper = styled.div`
+  display: relative;
+  border: 1px solid red;
 `

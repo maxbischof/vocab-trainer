@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-dQppl cSyhzl"
+  className="sc-hBEYos jlFbtW"
 >
   <h1>
     Test erstellen
   </h1>
   <form
-    className="sc-iqHYGH bQkWaJ"
+    className="sc-bqyKva iPBxZN"
     onSubmit={[Function]}
   >
     <input
@@ -28,63 +28,38 @@ exports[`renders correctly 1`] = `
       value=""
     />
     <div
-      className="sc-jrAGrp eCzjFT"
+      className="sc-dQppl eiDhZm"
     >
       <div
-        className="sc-pFZIQ insPiN"
+        className="sc-iqHYGH eCVtrs"
+      />
+      <div
+        className="sc-crrsfI jvIAEs"
       >
         <div
-          className="sc-fubCfw fYNuti"
-          color="var(--masculine)"
-          fontSize={21.5}
+          className="sc-fubCfw fCrBXh"
+          color="var(--noun)"
+          fontSize={54.5}
           onClick={[Function]}
         >
-          m
+          N
         </div>
         <div
-          className="sc-fubCfw gDpyfe"
-          color="var(--feminine)"
-          fontSize={21.5}
+          className="sc-fubCfw hARJCw"
+          color="var(--adjective)"
+          fontSize={54.5}
           onClick={[Function]}
         >
-          f
+          A
         </div>
         <div
-          className="sc-fubCfw NlhyU"
-          color="var(--neuter)"
-          fontSize={21.5}
+          className="sc-fubCfw gQvqCI"
+          color="var(--verb)"
+          fontSize={54.5}
           onClick={[Function]}
         >
-          n
+          V
         </div>
-      </div>
-    </div>
-    <div
-      className="sc-kEjbxe hLcugI"
-    >
-      <div
-        className="sc-fubCfw cZCdYp"
-        color="var(--noun)"
-        fontSize={31.5}
-        onClick={[Function]}
-      >
-        N
-      </div>
-      <div
-        className="sc-fubCfw gCDOfH"
-        color="var(--adjective)"
-        fontSize={31.5}
-        onClick={[Function]}
-      >
-        A
-      </div>
-      <div
-        className="sc-fubCfw bNrrpL"
-        color="var(--verb)"
-        fontSize={31.5}
-        onClick={[Function]}
-      >
-        V
       </div>
     </div>
     <button

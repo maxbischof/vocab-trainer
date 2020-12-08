@@ -1,37 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<div
+  className="sc-gKsewC ljXkTl"
+>
   <div
-    className="sc-dlfnbm iBRTos"
-  />,
+    className="sc-eCssSg jTrpXE"
+  />
   <div
-    className="sc-hKgILt jQZXli"
+    className="sc-jSgupP fEhQqE"
   >
     <div
-      className="sc-bdfBwQ iJftcN"
+      className="sc-bdfBwQ cUBNJa"
       color="var(--noun)"
-      fontSize={31.5}
+      fontSize={54.5}
       onClick={[Function]}
     >
       N
     </div>
     <div
-      className="sc-bdfBwQ kKnlhg"
+      className="sc-bdfBwQ hmnner"
       color="var(--adjective)"
-      fontSize={31.5}
+      fontSize={54.5}
       onClick={[Function]}
     >
       A
     </div>
     <div
-      className="sc-bdfBwQ gYGyJk"
+      className="sc-bdfBwQ hVrihj"
       color="var(--verb)"
-      fontSize={31.5}
+      fontSize={54.5}
       onClick={[Function]}
     >
       V
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

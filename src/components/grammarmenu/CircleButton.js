@@ -8,7 +8,6 @@ export default function CircleButton({
   diameter,
   onClick,
 }) {
-  const borderSize = (parseInt(diameter) * 1.5 - parseInt(diameter)) / 2
   const fontSize = parseInt(diameter) / 2
 
   return (
@@ -16,7 +15,6 @@ export default function CircleButton({
       active={activeProperty === text ? true : false}
       color={color}
       diameter={diameter}
-      borderSize={borderSize}
       fontSize={fontSize}
       onClick={() => onClick(text)}
     >
@@ -38,4 +36,6 @@ const Circle = styled.div`
   font-size: ${(props) => props.fontSize + 'px'};
   background-clip: padding-box;
   cursor: pointer;
+  ${(props) =>
+    props.active && 'border: 5px solid rgba(' + props.color + ', 1);'}
 `

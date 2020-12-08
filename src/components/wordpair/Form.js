@@ -32,25 +32,28 @@ export default function Form({ wordPairs, setWordPairs }) {
   }
 
   return (
-    <StyledForm onSubmit={onSubmit}>
-      <StyledWordClassSVG
-        onClick={() => setShowGrammarMenu(!showGrammerMenu)}
-      />
-      <Input
-        name="foreign"
-        type="text"
-        placeholder="Foreign"
-        onChange={onChange}
-        value={formInput.foreign}
-        ref={foreignInput}
-      />
-      <Input
-        name="native"
-        type="text"
-        placeholder="Native"
-        onChange={onChange}
-        value={formInput.native}
-      />
+    <>
+      <StyledForm onSubmit={onSubmit} isBlured={showGrammerMenu}>
+        <StyledWordClassSVG
+          onClick={() => setShowGrammarMenu(!showGrammerMenu)}
+        />
+        <Input
+          name="foreign"
+          type="text"
+          placeholder="Foreign"
+          onChange={onChange}
+          value={formInput.foreign}
+          ref={foreignInput}
+        />
+        <Input
+          name="native"
+          type="text"
+          placeholder="Native"
+          onChange={onChange}
+          value={formInput.native}
+        />
+        <Button type="submit">Add word</Button>
+      </StyledForm>
       {showGrammerMenu && (
         <GrammarMenu
           wordClass={wordClass}
@@ -63,8 +66,7 @@ export default function Form({ wordPairs, setWordPairs }) {
           setNumber={setNumber}
         />
       )}
-      <Button type="submit">Add word</Button>
-    </StyledForm>
+    </>
   )
 }
 
@@ -73,6 +75,7 @@ const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  ${(props) => props.isBlured && 'filter: blur(2px);'}
 `
 
 const StyledWordClassSVG = styled(WordClassSVG)`

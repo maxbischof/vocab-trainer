@@ -75,7 +75,12 @@ const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  ${(props) => props.isBlured && 'filter: blur(2px);'}
+  ${(props) =>
+    props.isBlured &&
+    `
+      filter: blur(2px); 
+      pointer-events: none;
+    `}
 `
 
 const StyledWordClassSVG = styled(WordClassSVG)`

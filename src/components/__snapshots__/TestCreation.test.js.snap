@@ -2,17 +2,17 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-fodVxV bFyUuZ"
+  className="sc-fFubgz cQaspW"
 >
   <h1>
     Test erstellen
   </h1>
   <form
-    className="sc-bqyKva iPBxZN"
+    className="sc-kstrdz jbggby"
     onSubmit={[Function]}
   >
     <svg
-      className="sc-kstrdz dtpusM"
+      className="sc-hBEYos iJOyUS"
       onClick={[Function]}
     >
       wordClass.svg

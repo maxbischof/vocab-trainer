@@ -2,8 +2,14 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-gKsewC ljXkTl"
+  className="sc-gKsewC GLcEh"
 >
+  <svg
+    className="sc-iBPRYJ dbnC"
+    onClick={[Function]}
+  >
+    delete.svg
+  </svg>
   <div
     className="sc-eCssSg jTrpXE"
   />
@@ -11,28 +17,28 @@ exports[`renders correctly 1`] = `
     className="sc-jSgupP fEhQqE"
   >
     <div
-      className="sc-bdfBwQ cUBNJa"
+      className="sc-bdfBwQ fYyUUw"
       color="var(--noun)"
-      fontSize={54.5}
+      fontSize={18.166666666666668}
       onClick={[Function]}
     >
-      N
+      Substantiv
     </div>
     <div
-      className="sc-bdfBwQ hmnner"
+      className="sc-bdfBwQ ikAZdN"
       color="var(--adjective)"
-      fontSize={54.5}
+      fontSize={18.166666666666668}
       onClick={[Function]}
     >
-      A
+      Adjektiv
     </div>
     <div
-      className="sc-bdfBwQ hVrihj"
+      className="sc-bdfBwQ UrhPZ"
       color="var(--verb)"
-      fontSize={54.5}
+      fontSize={18.166666666666668}
       onClick={[Function]}
     >
-      V
+      Verb
     </div>
   </div>
 </div>

@@ -6,7 +6,8 @@ export default createGlobalStyle`
         --text: #2F2F2F;
         --success: #2ecc71;
         --error: #e74c3c;
-        --buttonbackground: #2ecc71;
+        --primarybutton: #014254;
+        --secondarybutton: #1ABCBD;
         --buttontext: white;
         --noun: 43, 173, 134;
         --adjective: 255, 51, 210;

@@ -27,7 +27,10 @@ export default function TestCreation({ db }) {
 
           {wordPairs.length > 0 && (
             <TestPreview>
-              <Button onClick={() => createTest(wordPairs, db, setTestURL)}>
+              <Button
+                buttonstyle="primary"
+                onClick={() => createTest(wordPairs, db, setTestURL)}
+              >
                 Test erstellen
               </Button>
               <List words={wordPairs} deleteWord={deleteWord} />

@@ -52,7 +52,9 @@ export default function Form({ wordPairs, setWordPairs }) {
           onChange={onChange}
           value={formInput.native}
         />
-        <Button type="submit">Add word</Button>
+        <Button type="submit" buttonstyle="secondary">
+          Add word
+        </Button>
       </StyledForm>
       {showGrammarMenu && (
         <GrammarMenu

@@ -26,7 +26,7 @@ export default createGlobalStyle`
 
     body {
         background: var(--background);
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Comfortaa', cursive;
         color: var(--text);
         margin: 0;
     }

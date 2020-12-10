@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import CircleButton from '../CircleButton'
 
-export default function GenderSubMenu({ gender, setGender, color }) {
+export default function GenderMenu({ gender, setGender, color }) {
   return (
-    <StyledGenderSubMenu>
+    <StyledGenderMenu>
       <CircleButton
         text="Maskulin"
         color={color}
@@ -26,11 +26,11 @@ export default function GenderSubMenu({ gender, setGender, color }) {
         activeProperty={gender}
         onClick={setGender}
       />
-    </StyledGenderSubMenu>
+    </StyledGenderMenu>
   )
 }
 
-const StyledGenderSubMenu = styled.div`
+const StyledGenderMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

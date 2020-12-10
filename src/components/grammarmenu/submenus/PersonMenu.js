@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import CircleButton from '../CircleButton'
 
-export default function PersonSubMenu({ person, setPerson, color }) {
+export default function PersonMenu({ person, setPerson, color }) {
   return (
-    <StyledPersonSubMenu>
+    <StyledPersonMenu>
       <CircleButton
         text="1. Person"
         color={color}
@@ -26,11 +26,11 @@ export default function PersonSubMenu({ person, setPerson, color }) {
         activeProperty={person}
         onClick={setPerson}
       />
-    </StyledPersonSubMenu>
+    </StyledPersonMenu>
   )
 }
 
-const StyledPersonSubMenu = styled.div`
+const StyledPersonMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

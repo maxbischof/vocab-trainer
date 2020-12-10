@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import GenderSubMenu from './submenus/GenderSubMenu'
-import NumberSubMenu from './submenus/NumberSubMenu'
-import PersonSubMenu from './submenus/PersonSubMenu'
+import GenderMenu from './submenus/GenderMenu'
+import NumberMenu from './submenus/NumberMenu'
+import PersonMenu from './submenus/PersonMenu'
 
 export default function GrammarSubMenus({
   wordClass,
@@ -26,18 +26,18 @@ export default function GrammarSubMenus({
   return (
     <StyledGrammarSubMenus>
       {wordClass === 'Substantiv' && (
-        <GenderSubMenu gender={gender} setGender={setGender} color={color} />
+        <GenderMenu gender={gender} setGender={setGender} color={color} />
       )}
       {wordClass === 'Adjektiv' && (
         <>
-          <GenderSubMenu gender={gender} setGender={setGender} color={color} />
-          <NumberSubMenu number={number} setNumber={setNumber} color={color} />
+          <GenderMenu gender={gender} setGender={setGender} color={color} />
+          <NumberMenu number={number} setNumber={setNumber} color={color} />
         </>
       )}
       {wordClass === 'Verb' && (
         <>
-          <PersonSubMenu person={person} setPerson={setPerson} color={color} />
-          <NumberSubMenu number={number} setNumber={setNumber} color={color} />
+          <PersonMenu person={person} setPerson={setPerson} color={color} />
+          <NumberMenu number={number} setNumber={setNumber} color={color} />
         </>
       )}
     </StyledGrammarSubMenus>

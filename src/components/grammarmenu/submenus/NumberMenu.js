@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import CircleButton from '../CircleButton'
 
-export default function NumberSubMenu({ number, setNumber, color }) {
+export default function NumberMenu({ number, setNumber, color }) {
   return (
-    <StyledNumberSubMenu>
+    <StyledNumberMenu>
       <CircleButton
         text="Singular"
         color={color}
@@ -19,11 +19,11 @@ export default function NumberSubMenu({ number, setNumber, color }) {
         activeProperty={number}
         onClick={setNumber}
       />
-    </StyledNumberSubMenu>
+    </StyledNumberMenu>
   )
 }
 
-const StyledNumberSubMenu = styled.div`
+const StyledNumberMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

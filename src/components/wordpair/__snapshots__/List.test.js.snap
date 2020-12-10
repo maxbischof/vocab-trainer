@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="sc-hKgILt gAqaJR"
 >
   <li
-    className="sc-bdfBwQ ldQlgV"
+    className="sc-bdfBwQ ftQkNA"
   >
     <div
       className="sc-gsTCUz eugYRC"
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
     </svg>
   </li>
   <li
-    className="sc-bdfBwQ ldQlgV"
+    className="sc-bdfBwQ ftQkNA"
   >
     <div
       className="sc-gsTCUz eugYRC"

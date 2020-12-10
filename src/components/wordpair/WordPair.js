@@ -18,7 +18,12 @@ const StyledWordpair = styled.li`
   padding: 10px;
   border-bottom: 1px solid var(--text);
   display: grid;
-  grid-template-columns: auto 40px;
+  grid-template-columns: auto auto;
+  align-items: center;
+
+  :last-child {
+    border-bottom: none;
+  }
 `
 
 const Words = styled.div`

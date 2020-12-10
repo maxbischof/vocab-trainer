@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-bkzZxe fHCCqi"
+  className="sc-fFubgz eJfBKw"
 >
   <h1>
     Test erstellen
   </h1>
   <div
-    className="sc-idOhPF hDKQIA"
+    className="sc-bkzZxe hgRAws"
   >
     <form
       className="sc-hBEYos ktSZJx"

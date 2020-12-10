@@ -24,9 +24,7 @@ export default function TestCreation({ db }) {
         <StyledTestCreation>
           <h1>Test erstellen</h1>
           {wordPairs.length > 0 && (
-            <TestPreview>
-              <List words={wordPairs} deleteWord={deleteWord} />
-            </TestPreview>
+            <List words={wordPairs} deleteWord={deleteWord} />
           )}
           <StickyWrapper>
             <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
@@ -42,16 +40,6 @@ export default function TestCreation({ db }) {
     </>
   )
 }
-
-const TestPreview = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid var(--text);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 40px;
-`
 
 const StyledTestCreation = styled.div`
   display: flex;

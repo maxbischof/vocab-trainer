@@ -23,8 +23,6 @@ export default function TestCreation({ db }) {
       ) : (
         <StyledTestCreator>
           <h1>Test erstellen</h1>
-          <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
-
           {wordPairs.length > 0 && (
             <TestPreview>
               <Button
@@ -36,6 +34,7 @@ export default function TestCreation({ db }) {
               <List words={wordPairs} deleteWord={deleteWord} />
             </TestPreview>
           )}
+          <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
         </StyledTestCreator>
       )}
     </>

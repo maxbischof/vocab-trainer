@@ -84,6 +84,9 @@ const StyledForm = styled.form`
       filter: blur(2px); 
       pointer-events: none;
     `}
+  position:sticky;
+  bottom: 0;
+  background: var(--background);
 `
 
 const StyledWordClassSVG = styled(WordClassSVG)`

@@ -31,10 +31,11 @@ export default function PersonSubMenu({ person, setPerson, color }) {
 }
 
 const StyledPersonSubMenu = styled.div`
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-row: 1/1;
+  grid-column: 1/1;
 
   > div {
     position: absolute;

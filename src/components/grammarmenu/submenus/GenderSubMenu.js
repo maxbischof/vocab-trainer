@@ -31,14 +31,16 @@ export default function GenderSubMenu({ gender, setGender, color }) {
 }
 
 const StyledGenderSubMenu = styled.div`
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-row: 1/1;
+  grid-column: 1/1;
 
   > div {
     position: absolute;
   }
+
   > :nth-child(1) {
     transform: rotate(310deg) translate(95px) rotate(-310deg);
   }

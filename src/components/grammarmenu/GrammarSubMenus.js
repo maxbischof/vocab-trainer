@@ -45,7 +45,12 @@ export default function GrammarSubMenus({
 }
 
 const StyledGrammarSubMenus = styled.div`
-  display: flex;
-  height: 209px;
-  position: absolute;
+  position: relative;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
 `

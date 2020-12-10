@@ -57,8 +57,9 @@ export default function GrammarMenu({
 }
 
 const StyledGrammarMenu = styled.div`
+  grid-row: 2/3;
+  grid-column: 1/3;
   position: relative;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,11 +93,18 @@ const StyledGrammarMenu = styled.div`
 `
 
 const MenusWrapper = styled.div`
-  display: relative;
+  display: grid;
+  grid-template-rows: 20px 1fr;
+  grid-template-columns: 1fr auto;
+  justify-items: center;
+  align-items: center;
+  position: sticky;
+  bottom: 20px;
+  width: 250px;
+  height: 250px;
 `
-
 const StyledCloseIcon = styled(CloseIcon)`
-  transform: translate(120px, -120px);
   cursor: pointer;
-  position: absolute;
+  grid-row: 1/2;
+  grid-column: 2/3;
 `

@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     Test erstellen
   </h1>
   <form
-    className="sc-kstrdz jbggby"
+    className="sc-kstrdz opBkI"
     onSubmit={[Function]}
   >
     <svg

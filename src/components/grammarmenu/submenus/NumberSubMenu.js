@@ -24,10 +24,11 @@ export default function NumberSubMenu({ number, setNumber, color }) {
 }
 
 const StyledNumberSubMenu = styled.div`
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-row: 1/1;
+  grid-column: 1/1;
 
   > div {
     position: absolute;

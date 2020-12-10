@@ -41,9 +41,7 @@ const StyledGrammarMenu = styled.div`
   grid-template-columns: 1fr auto;
   justify-items: center;
   align-items: center;
-  position: sticky;
   padding: 0 0 20px 0;
-  bottom: 0;
   width: 250px;
   height: 190px;
 `

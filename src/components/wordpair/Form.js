@@ -84,16 +84,14 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
   ${(props) =>
     props.isBlured &&
     `
       filter: blur(2px); 
       pointer-events: none;
     `}
-  position:sticky;
-  bottom: 0;
   background: var(--background);
+  width: 100%;
 `
 
 const StyledWordClassSVG = styled(WordClassSVG)`

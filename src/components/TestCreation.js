@@ -21,21 +21,23 @@ export default function TestCreation({ db }) {
       {testURL ? (
         <TestLink testURL={testURL} />
       ) : (
-        <StyledTestCreator>
+        <StyledTestCreation>
           <h1>Test erstellen</h1>
           {wordPairs.length > 0 && (
             <TestPreview>
-              <Button
-                buttonstyle="primary"
-                onClick={() => createTest(wordPairs, db, setTestURL)}
-              >
-                Test erstellen
-              </Button>
               <List words={wordPairs} deleteWord={deleteWord} />
             </TestPreview>
           )}
-          <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
-        </StyledTestCreator>
+          <StickyWrapper>
+            <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
+            <Button
+              buttonstyle="primary"
+              onClick={() => createTest(wordPairs, db, setTestURL)}
+            >
+              Test erstellen
+            </Button>
+          </StickyWrapper>
+        </StyledTestCreation>
       )}
     </>
   )
@@ -51,8 +53,17 @@ const TestPreview = styled.div`
   margin: 40px;
 `
 
-const StyledTestCreator = styled.div`
+const StyledTestCreation = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+`
+const StickyWrapper = styled.div`
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
 `

@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-kEjbxe jnZXsj"
+  className="sc-kEjbxe hEGHAA"
   onSubmit={[Function]}
 >
   <svg
@@ -28,7 +28,7 @@ exports[`renders correctly 1`] = `
     value=""
   />
   <button
-    className="sc-gsTCUz jxdpRJ"
+    className="sc-gsTCUz fHkPqr"
     type="submit"
   >
     Add word

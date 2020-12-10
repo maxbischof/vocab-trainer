@@ -24,8 +24,7 @@ export default function Button({ type, onClick, children, buttonstyle }) {
 
 const StyledButton = styled.button`
   border: none;
-  padding: 10px 10px;
-  margin: 10px;
+  margin: 5px;
   background: ${(props) =>
     props.buttonstyle?.background || 'var(--primarybutton)'};
   color: white;

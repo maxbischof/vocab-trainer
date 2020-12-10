@@ -31,6 +31,13 @@ export default function Form({ wordPairs, setWordPairs }) {
     setFormInput(newFormInput)
   }
 
+  function changeWordClass(wordClass) {
+    setWordClass(wordClass)
+    setGender()
+    setPerson()
+    setNumber()
+  }
+
   return (
     <>
       <StyledForm onSubmit={onSubmit} isBlured={showGrammarMenu}>
@@ -59,7 +66,7 @@ export default function Form({ wordPairs, setWordPairs }) {
       {showGrammarMenu && (
         <GrammarMenu
           wordClass={wordClass}
-          setWordClass={setWordClass}
+          setWordClass={changeWordClass}
           gender={gender}
           setGender={setGender}
           person={person}

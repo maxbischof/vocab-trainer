@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Input = React.forwardRef(
-  ({ name, type, placeholder, onChange, value }, ref) => (
+  ({ name, type, placeholder, onChange, value, error }, ref) => (
     <StyledInput
       name={name}
       type={type}
@@ -10,6 +10,7 @@ const Input = React.forwardRef(
       onChange={onChange}
       value={value}
       ref={ref}
+      error={error}
     ></StyledInput>
   )
 )
@@ -20,6 +21,10 @@ const StyledInput = styled.input`
   border-radius: 0;
   padding: 5px;
   margin: 10px 0 10px 0;
+  ${(props) =>
+    props.error &&
+    props.error === props.name &&
+    'border: 2px solid var(--error)'}
 `
 
 export default Input

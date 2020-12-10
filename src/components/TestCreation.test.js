@@ -13,7 +13,7 @@ it('add wordpairs to the list', () => {
   render(<TestCreation />)
   userEvent.type(screen.getByPlaceholderText('Foreign'), 'the car')
   userEvent.type(screen.getByPlaceholderText('Native'), 'das Auto')
-  userEvent.click(screen.getByText('Add word'))
+  userEvent.click(screen.getByText('Wortpaar hinzufügen'))
 
   expect(screen.getByText(/the car/)).toBeInTheDocument()
 
@@ -24,7 +24,7 @@ it('removes wordpairs from the list', () => {
   render(<TestCreation />)
   userEvent.type(screen.getByPlaceholderText('Foreign'), 'the car')
   userEvent.type(screen.getByPlaceholderText('Native'), 'das Auto')
-  userEvent.click(screen.getByText('Add word'))
+  userEvent.click(screen.getByText('Wortpaar hinzufügen'))
   userEvent.click(screen.getByRole('listitem').querySelector('svg'))
 
   expect(screen.queryByText(/the car/)).toBeNull()

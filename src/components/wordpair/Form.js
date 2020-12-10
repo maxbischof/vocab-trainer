@@ -5,11 +5,24 @@ import Button from '../ui/Button'
 
 export default function Form({ wordPairs, setWordPairs, isBlured }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
+  const [validationError, setValidationError] = useState()
 
   const foreignInput = createRef()
 
   function onSubmit(event) {
     event.preventDefault()
+    setValidationError()
+
+    if (!formInput.foreign) {
+      setValidationError('foreign')
+      return
+    }
+
+    if (!formInput.native) {
+      setValidationError('native')
+      return
+    }
+
     const newWords = [...wordPairs]
     newWords.push(formInput)
     setWordPairs(newWords)
@@ -34,6 +47,7 @@ export default function Form({ wordPairs, setWordPairs, isBlured }) {
           onChange={onChange}
           value={formInput.foreign}
           ref={foreignInput}
+          error={validationError}
         />
         <Input
           name="native"
@@ -41,9 +55,10 @@ export default function Form({ wordPairs, setWordPairs, isBlured }) {
           placeholder="Native"
           onChange={onChange}
           value={formInput.native}
+          error={validationError}
         />
         <Button type="submit" buttonstyle="secondary">
-          Add word
+          Wortpaar hinzufügen
         </Button>
       </StyledForm>
     </>

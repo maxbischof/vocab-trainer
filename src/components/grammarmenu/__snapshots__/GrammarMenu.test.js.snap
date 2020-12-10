@@ -2,19 +2,19 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-gKsewC GLcEh"
+  className="sc-gKsewC kJcfdd"
 >
   <svg
-    className="sc-iBPRYJ dbnC"
+    className="sc-iBPRYJ fKRoRo"
     onClick={[Function]}
   >
     delete.svg
   </svg>
   <div
-    className="sc-eCssSg jTrpXE"
+    className="sc-eCssSg buxNVn"
   />
   <div
-    className="sc-jSgupP fEhQqE"
+    className="sc-jSgupP gEyGtx"
   >
     <div
       className="sc-bdfBwQ fYyUUw"

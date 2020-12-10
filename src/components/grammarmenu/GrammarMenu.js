@@ -17,7 +17,6 @@ export default function GrammarMenu({
 }) {
   return (
     <>
-      <Blur />
       <StyledGrammarMenu>
         <StyledCloseIcon onClick={() => setShowGrammarMenu(false)} />
         <GrammarSubMenus
@@ -37,11 +36,13 @@ export default function GrammarMenu({
 
 const StyledGrammarMenu = styled.div`
   display: grid;
+  background: var(--background);
   grid-template-rows: 20px 1fr;
   grid-template-columns: 1fr auto;
   justify-items: center;
   align-items: center;
-  padding: 0 0 20px 0;
+  position: absolute;
+  padding: 20px 0 20px 0;
   width: 250px;
   height: 190px;
 `
@@ -49,10 +50,4 @@ const StyledCloseIcon = styled(CloseIcon)`
   cursor: pointer;
   grid-row: 1/2;
   grid-column: 2/3;
-`
-const Blur = styled.div`
-  height: 100vh;
-  width: 100vw;
-  backdrop-filter: blur(5px);
-  position: absolute;
 `

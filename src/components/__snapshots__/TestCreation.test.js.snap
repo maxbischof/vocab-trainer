@@ -2,24 +2,24 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-fFubgz eJfBKw"
+  className="sc-hBEYos gfIhAE"
 >
   <h1>
     Test erstellen
   </h1>
   <div
-    className="sc-bkzZxe hgRAws"
+    className="sc-fodVxV cewEal"
   >
+    <svg
+      className="sc-fFubgz imBTXa"
+      onClick={[Function]}
+    >
+      wordClass.svg
+    </svg>
     <form
-      className="sc-hBEYos ktSZJx"
+      className="sc-fubCfw ePYkCt"
       onSubmit={[Function]}
     >
-      <svg
-        className="sc-fodVxV kbguSR"
-        onClick={[Function]}
-      >
-        wordClass.svg
-      </svg>
       <input
         className="sc-iBPRYJ jxdMbx"
         name="foreign"

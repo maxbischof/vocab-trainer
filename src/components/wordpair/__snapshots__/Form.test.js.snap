@@ -2,15 +2,9 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-kEjbxe hEGHAA"
+  className="sc-dlfnbm cKZJdd"
   onSubmit={[Function]}
 >
-  <svg
-    className="sc-iqHYGH gYKtJC"
-    onClick={[Function]}
-  >
-    wordClass.svg
-  </svg>
   <input
     className="sc-bdfBwQ hRYrgT"
     name="foreign"

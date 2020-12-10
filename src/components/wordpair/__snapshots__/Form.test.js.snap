@@ -2,11 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-jrAGrp gVSrns"
+  className="sc-kEjbxe jnZXsj"
   onSubmit={[Function]}
 >
   <svg
-    className="sc-kEjbxe dHxCwD"
+    className="sc-iqHYGH gYKtJC"
     onClick={[Function]}
   >
     wordClass.svg

@@ -16,19 +16,22 @@ export default function GrammarMenu({
   setShowGrammarMenu,
 }) {
   return (
-    <StyledGrammarMenu>
-      <StyledCloseIcon onClick={() => setShowGrammarMenu(false)} />
-      <GrammarSubMenus
-        wordClass={wordClass}
-        gender={gender}
-        setGender={setGender}
-        person={person}
-        setPerson={setPerson}
-        number={number}
-        setNumber={setNumber}
-      />
-      <WordClassMenu wordClass={wordClass} setWordClass={setWordClass} />
-    </StyledGrammarMenu>
+    <>
+      <Blur />
+      <StyledGrammarMenu>
+        <StyledCloseIcon onClick={() => setShowGrammarMenu(false)} />
+        <GrammarSubMenus
+          wordClass={wordClass}
+          gender={gender}
+          setGender={setGender}
+          person={person}
+          setPerson={setPerson}
+          number={number}
+          setNumber={setNumber}
+        />
+        <WordClassMenu wordClass={wordClass} setWordClass={setWordClass} />
+      </StyledGrammarMenu>
+    </>
   )
 }
 
@@ -39,12 +42,19 @@ const StyledGrammarMenu = styled.div`
   justify-items: center;
   align-items: center;
   position: sticky;
-  bottom: 20px;
+  padding: 0 0 20px 0;
+  bottom: 0;
   width: 250px;
-  height: 250px;
+  height: 190px;
 `
 const StyledCloseIcon = styled(CloseIcon)`
   cursor: pointer;
   grid-row: 1/2;
   grid-column: 2/3;
+`
+const Blur = styled.div`
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(5px);
+  position: absolute;
 `

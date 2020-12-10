@@ -36,7 +36,6 @@ export default function GrammarMenu({
 
 const StyledGrammarMenu = styled.div`
   display: grid;
-  background: var(--background);
   grid-template-rows: 20px 1fr;
   grid-template-columns: 1fr auto;
   justify-items: center;

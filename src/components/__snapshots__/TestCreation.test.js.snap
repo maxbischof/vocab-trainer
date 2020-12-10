@@ -4,51 +4,55 @@ exports[`renders correctly 1`] = `
 <div
   className="sc-hBEYos gfIhAE"
 >
-  <h1>
-    Test erstellen
-  </h1>
   <div
-    className="sc-fodVxV cewEal"
+    className="sc-fFubgz jEHjpd"
   >
-    <svg
-      className="sc-fFubgz imBTXa"
-      onClick={[Function]}
-    >
-      wordClass.svg
-    </svg>
-    <form
-      className="sc-fubCfw ePYkCt"
-      onSubmit={[Function]}
-    >
-      <input
-        className="sc-iBPRYJ jxdMbx"
-        name="foreign"
-        onChange={[Function]}
-        placeholder="Foreign"
-        type="text"
-        value=""
-      />
-      <input
-        className="sc-iBPRYJ jxdMbx"
-        name="native"
-        onChange={[Function]}
-        placeholder="Native"
-        type="text"
-        value=""
-      />
-      <button
-        className="sc-gsTCUz fHkPqr"
-        type="submit"
-      >
-        Add word
-      </button>
-    </form>
-    <button
-      className="sc-gsTCUz EKePd"
-      onClick={[Function]}
-    >
+    <h1>
       Test erstellen
-    </button>
+    </h1>
+    <div
+      className="sc-fodVxV gShOgN"
+    >
+      <svg
+        className="sc-bkzZxe fZQXYI"
+        onClick={[Function]}
+      >
+        wordClass.svg
+      </svg>
+      <form
+        className="sc-fubCfw ePYkCt"
+        onSubmit={[Function]}
+      >
+        <input
+          className="sc-iBPRYJ jxdMbx"
+          name="foreign"
+          onChange={[Function]}
+          placeholder="Foreign"
+          type="text"
+          value=""
+        />
+        <input
+          className="sc-iBPRYJ jxdMbx"
+          name="native"
+          onChange={[Function]}
+          placeholder="Native"
+          type="text"
+          value=""
+        />
+        <button
+          className="sc-gsTCUz fHkPqr"
+          type="submit"
+        >
+          Add word
+        </button>
+      </form>
+      <button
+        className="sc-gsTCUz EKePd"
+        onClick={[Function]}
+      >
+        Test erstellen
+      </button>
+    </div>
   </div>
 </div>
 `;

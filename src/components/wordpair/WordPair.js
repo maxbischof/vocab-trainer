@@ -18,7 +18,7 @@ const StyledWordpair = styled.li`
   padding: 10px;
   border-bottom: 1px solid var(--text);
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
 
   :last-child {

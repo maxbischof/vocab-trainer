@@ -36,35 +36,37 @@ export default function TestCreation({ db }) {
         <TestLink testURL={testURL} />
       ) : (
         <StyledTestCreation>
-          <h1>Test erstellen</h1>
-          {wordPairs.length > 0 && (
-            <List words={wordPairs} deleteWord={deleteWord} />
-          )}
-          <StickyWrapper>
-            <StyledWordClassSVG
-              onClick={() => setShowGrammarMenu(!showGrammarMenu)}
-            />
-            <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
-            <Button
-              buttonstyle="primary"
-              onClick={() => createTest(wordPairs, db, setTestURL)}
-            >
-              Test erstellen
-            </Button>
-            {showGrammarMenu && (
-              <GrammarMenu
-                wordClass={wordClass}
-                setWordClass={changeWordClass}
-                gender={gender}
-                setGender={setGender}
-                person={person}
-                setPerson={setPerson}
-                number={number}
-                setNumber={setNumber}
-                setShowGrammarMenu={setShowGrammarMenu}
-              />
+          <BlurWrapper isBlured={showGrammarMenu}>
+            <h1>Test erstellen</h1>
+            {wordPairs.length > 0 && (
+              <List words={wordPairs} deleteWord={deleteWord} />
             )}
-          </StickyWrapper>
+            <StickyWrapper>
+              <StyledWordClassSVG
+                onClick={() => setShowGrammarMenu(!showGrammarMenu)}
+              />
+              <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
+              <Button
+                buttonstyle="primary"
+                onClick={() => createTest(wordPairs, db, setTestURL)}
+              >
+                Test erstellen
+              </Button>
+            </StickyWrapper>
+          </BlurWrapper>
+          {showGrammarMenu && (
+            <GrammarMenu
+              wordClass={wordClass}
+              setWordClass={changeWordClass}
+              gender={gender}
+              setGender={setGender}
+              person={person}
+              setPerson={setPerson}
+              number={number}
+              setNumber={setNumber}
+              setShowGrammarMenu={setShowGrammarMenu}
+            />
+          )}
         </StyledTestCreation>
       )}
     </>
@@ -83,7 +85,21 @@ const StickyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 10px;
+  justify-content: center;
+  background: var(--background);
+`
+
+const BlurWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ${(props) =>
+    props.isBlured &&
+    `
+    filter: blur(5px);
+    pointer-events: none;
+  `}
 `
 
 const StyledWordClassSVG = styled(WordClassSVG)`

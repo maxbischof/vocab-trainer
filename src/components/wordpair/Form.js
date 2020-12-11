@@ -63,7 +63,7 @@ export default function Form({
         <Input
           name="foreign"
           type="text"
-          placeholder="Foreign"
+          placeholder="Fremdsprache"
           onChange={onChange}
           value={formInput.foreign}
           ref={foreignInput}
@@ -72,7 +72,7 @@ export default function Form({
         <Input
           name="native"
           type="text"
-          placeholder="Native"
+          placeholder="Deutsch"
           onChange={onChange}
           value={formInput.native}
           error={validationError}

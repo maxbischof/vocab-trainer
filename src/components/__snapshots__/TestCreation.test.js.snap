@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
           className="sc-iBPRYJ evbQSY"
           name="foreign"
           onChange={[Function]}
-          placeholder="Foreign"
+          placeholder="Fremdsprache"
           type="text"
           value=""
         />
@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
           className="sc-iBPRYJ evbQSY"
           name="native"
           onChange={[Function]}
-          placeholder="Native"
+          placeholder="Deutsch"
           type="text"
           value=""
         />

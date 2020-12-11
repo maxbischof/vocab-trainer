@@ -20,4 +20,6 @@ export default function List({ words, deleteWord }) {
 const StyledWordPairList = styled.ul`
   list-style-type: none;
   padding: 0;
+  display: grid;
+  justify-items: center;
 `

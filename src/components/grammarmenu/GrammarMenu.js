@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import GrammarSubMenus from './GrammarSubMenus'
-import { ReactComponent as CloseIcon } from '../../icons/delete.svg'
+import { ReactComponent as ConfirmIcon } from '../../icons/confirm.svg'
 import WordClassMenu from './WordClassMenu'
 
 export default function GrammarMenu({
@@ -18,7 +18,7 @@ export default function GrammarMenu({
   return (
     <>
       <StyledGrammarMenu>
-        <StyledCloseIcon onClick={() => setShowGrammarMenu(false)} />
+        <StyledConfirmIcon onClick={() => setShowGrammarMenu(false)} />
         <GrammarSubMenus
           wordClass={wordClass}
           gender={gender}
@@ -45,7 +45,7 @@ const StyledGrammarMenu = styled.div`
   width: 250px;
   height: 190px;
 `
-const StyledCloseIcon = styled(CloseIcon)`
+const StyledConfirmIcon = styled(ConfirmIcon)`
   cursor: pointer;
   grid-row: 1/2;
   grid-column: 2/3;

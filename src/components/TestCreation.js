@@ -45,7 +45,17 @@ export default function TestCreation({ db }) {
               <StyledWordClassSVG
                 onClick={() => setShowGrammarMenu(!showGrammarMenu)}
               />
-              <Form wordPairs={wordPairs} setWordPairs={setWordPairs} />
+              <Form
+                wordPairs={wordPairs}
+                setWordPairs={setWordPairs}
+                gender={gender}
+                setGender={setGender}
+                person={person}
+                setPerson={setPerson}
+                number={number}
+                setNumber={setNumber}
+                setWordClass={setWordClass}
+              />
               <Button
                 buttonstyle="primary"
                 onClick={() => createTest(wordPairs, db, setTestURL)}

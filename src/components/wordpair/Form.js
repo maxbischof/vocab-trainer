@@ -3,7 +3,18 @@ import styled from 'styled-components'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
 
-export default function Form({ wordPairs, setWordPairs, isBlured }) {
+export default function Form({
+  wordPairs,
+  setWordPairs,
+  isBlured,
+  gender,
+  person,
+  number,
+  setGender,
+  setNumber,
+  setPerson,
+  setWordClass,
+}) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const [validationError, setValidationError] = useState()
 
@@ -23,10 +34,19 @@ export default function Form({ wordPairs, setWordPairs, isBlured }) {
       return
     }
 
-    const newWords = [...wordPairs]
-    newWords.push(formInput)
-    setWordPairs(newWords)
+    if (gender) formInput.gender = gender
+    if (person) formInput.person = person
+    if (number) formInput.number = number
+
+    const wordPairsCopy = [...wordPairs]
+    wordPairsCopy.push(formInput)
+    setWordPairs(wordPairsCopy)
+
     setFormInput({ foreign: '', native: '' })
+    setGender()
+    setNumber()
+    setPerson()
+    setWordClass()
     foreignInput.current.focus()
   }
 

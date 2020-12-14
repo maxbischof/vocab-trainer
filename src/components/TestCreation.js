@@ -17,10 +17,11 @@ export default function TestCreation({ db }) {
   const [showGrammarMenu, setShowGrammarMenu] = useState(false)
 
   function addWordPair(wordPair) {
-    if (wordClass) wordPair.wordClass = wordClass
-    if (gender) wordPair.gender = gender
-    if (person) wordPair.person = person
-    if (number) wordPair.number = number
+    if (wordClass || gender || person || number) wordPair.grammar = {}
+    if (wordClass) wordPair.grammar.wordClass = wordClass
+    if (gender) wordPair.grammar.gender = gender
+    if (person) wordPair.grammar.person = person
+    if (number) wordPair.grammar.number = number
 
     const wordPairsCopy = [...wordPairs]
     wordPairsCopy.push(wordPair)

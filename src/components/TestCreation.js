@@ -6,7 +6,6 @@ import { createTest } from '../lib/firebase'
 import List from './wordpair/List'
 import Form from './wordpair/Form'
 import GrammarMenu from './grammarmenu/GrammarMenu'
-import { ReactComponent as WordClassSVG } from '../icons/wordClass.svg'
 
 export default function TestCreation({ db }) {
   const [wordPairs, setWordPairs] = useState([])
@@ -57,10 +56,10 @@ export default function TestCreation({ db }) {
               <List words={wordPairs} deleteWord={deleteWordPair} />
             )}
             <StickyWrapper>
-              <StyledWordClassSVG
-                onClick={() => setShowGrammarMenu(!showGrammarMenu)}
+              <Form
+                addWordPair={addWordPair}
+                showGrammarMenu={setShowGrammarMenu}
               />
-              <Form addWordPair={addWordPair} />
               <Button
                 buttonstyle="primary"
                 onClick={() => createTest(wordPairs, db, setTestURL)}
@@ -115,8 +114,4 @@ const BlurWrapper = styled.div`
     filter: blur(5px);
     pointer-events: none;
   `}
-`
-
-const StyledWordClassSVG = styled(WordClassSVG)`
-  cursor: pointer;
 `

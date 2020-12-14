@@ -2,8 +2,9 @@ import React, { createRef, useState } from 'react'
 import styled from 'styled-components'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
+import { ReactComponent as WordClassSVG } from '../../icons/wordClass.svg'
 
-export default function Form({ addWordPair }) {
+export default function Form({ addWordPair, showGrammarMenu }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const [validationError, setValidationError] = useState()
 
@@ -38,6 +39,7 @@ export default function Form({ addWordPair }) {
 
   return (
     <>
+      <GrammarMenuButton onClick={() => showGrammarMenu(true)} />
       <StyledForm onSubmit={onSubmit}>
         <Input
           name="foreign"
@@ -70,4 +72,8 @@ const StyledForm = styled.form`
   align-items: center;
   background: var(--background);
   width: 100%;
+`
+
+const GrammarMenuButton = styled(WordClassSVG)`
+  cursor: pointer;
 `

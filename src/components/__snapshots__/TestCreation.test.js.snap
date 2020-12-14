@@ -2,19 +2,19 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-hBEYos gfIhAE"
+  className="sc-fodVxV hsmcBT"
 >
   <div
-    className="sc-fFubgz jEHjpd"
+    className="sc-bkzZxe DMTKH"
   >
     <h1>
       Test erstellen
     </h1>
     <div
-      className="sc-fodVxV gShOgN"
+      className="sc-fFubgz jPzCWa"
     >
       <svg
-        className="sc-bkzZxe fZQXYI"
+        className="sc-pFZIQ ddytng"
         onClick={[Function]}
       >
         wordClass.svg

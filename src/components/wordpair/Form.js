@@ -3,18 +3,7 @@ import styled from 'styled-components'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
 
-export default function Form({
-  wordPairs,
-  setWordPairs,
-  isBlured,
-  gender,
-  person,
-  number,
-  setGender,
-  setNumber,
-  setPerson,
-  setWordClass,
-}) {
+export default function Form({ addWordPair }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const [validationError, setValidationError] = useState()
 
@@ -34,19 +23,9 @@ export default function Form({
       return
     }
 
-    if (gender) formInput.gender = gender
-    if (person) formInput.person = person
-    if (number) formInput.number = number
-
-    const wordPairsCopy = [...wordPairs]
-    wordPairsCopy.push(formInput)
-    setWordPairs(wordPairsCopy)
+    addWordPair(formInput)
 
     setFormInput({ foreign: '', native: '' })
-    setGender()
-    setNumber()
-    setPerson()
-    setWordClass()
     foreignInput.current.focus()
   }
 
@@ -59,7 +38,7 @@ export default function Form({
 
   return (
     <>
-      <StyledForm onSubmit={onSubmit} isBlured={isBlured}>
+      <StyledForm onSubmit={onSubmit}>
         <Input
           name="foreign"
           type="text"

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import TestLink from './TestCreated'
+import TestCreated from './TestCreated'
 import Button from './ui/Button'
 import { createTest } from '../lib/firebase'
 import List from './wordpair/List'
@@ -17,7 +17,22 @@ export default function TestCreation({ db }) {
   const [number, setNumber] = useState()
   const [showGrammarMenu, setShowGrammarMenu] = useState(false)
 
-  function deleteWord(index) {
+  function addWordPair(wordPair) {
+    if (gender) wordPair.gender = gender
+    if (person) wordPair.person = person
+    if (number) wordPair.number = number
+
+    const wordPairsCopy = [...wordPairs]
+    wordPairsCopy.push(wordPair)
+    setWordPairs(wordPairsCopy)
+
+    setGender()
+    setNumber()
+    setPerson()
+    setWordClass()
+  }
+
+  function deleteWordPair(index) {
     const newWords = [...wordPairs]
     newWords.splice(index, 1)
     setWordPairs(newWords)
@@ -33,29 +48,19 @@ export default function TestCreation({ db }) {
   return (
     <>
       {testURL ? (
-        <TestLink testURL={testURL} />
+        <TestCreated testURL={testURL} />
       ) : (
         <StyledTestCreation>
           <BlurWrapper isBlured={showGrammarMenu}>
             <h1>Test erstellen</h1>
             {wordPairs.length > 0 && (
-              <List words={wordPairs} deleteWord={deleteWord} />
+              <List words={wordPairs} deleteWord={deleteWordPair} />
             )}
             <StickyWrapper>
               <StyledWordClassSVG
                 onClick={() => setShowGrammarMenu(!showGrammarMenu)}
               />
-              <Form
-                wordPairs={wordPairs}
-                setWordPairs={setWordPairs}
-                gender={gender}
-                setGender={setGender}
-                person={person}
-                setPerson={setPerson}
-                number={number}
-                setNumber={setNumber}
-                setWordClass={setWordClass}
-              />
+              <Form addWordPair={addWordPair} />
               <Button
                 buttonstyle="primary"
                 onClick={() => createTest(wordPairs, db, setTestURL)}

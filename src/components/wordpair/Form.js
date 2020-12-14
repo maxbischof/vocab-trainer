@@ -1,4 +1,4 @@
-import React, { createRef, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
@@ -7,8 +7,6 @@ import { ReactComponent as WordClassSVG } from '../../icons/wordClass.svg'
 export default function Form({ addWordPair, showGrammarMenu }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const [validationError, setValidationError] = useState()
-
-  const foreignInput = createRef()
 
   function onSubmit(event) {
     event.preventDefault()
@@ -27,7 +25,6 @@ export default function Form({ addWordPair, showGrammarMenu }) {
     addWordPair(formInput)
 
     setFormInput({ foreign: '', native: '' })
-    foreignInput.current.focus()
   }
 
   function onChange(event) {
@@ -47,7 +44,6 @@ export default function Form({ addWordPair, showGrammarMenu }) {
           placeholder="Fremdsprache"
           onChange={onChange}
           value={formInput.foreign}
-          ref={foreignInput}
           error={validationError}
         />
         <Input

@@ -2,14 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Input = React.forwardRef(
-  ({ name, type, placeholder, onChange, value, error }, ref) => (
+  ({ name, type, placeholder, onChange, value, error }) => (
     <StyledInput
       name={name}
       type={type}
       placeholder={placeholder}
       onChange={onChange}
       value={value}
-      ref={ref}
       error={error}
     ></StyledInput>
   )

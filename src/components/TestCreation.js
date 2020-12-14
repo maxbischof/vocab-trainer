@@ -17,6 +17,7 @@ export default function TestCreation({ db }) {
   const [showGrammarMenu, setShowGrammarMenu] = useState(false)
 
   function addWordPair(wordPair) {
+    if (wordClass) wordPair.wordClass = wordClass
     if (gender) wordPair.gender = gender
     if (person) wordPair.person = person
     if (number) wordPair.number = number

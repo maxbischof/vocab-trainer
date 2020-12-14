@@ -103,6 +103,8 @@ const StickyWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background: var(--background);
+  width: 100%;
+  max-width: 600px;
 `
 
 const BlurWrapper = styled.div`

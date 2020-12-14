@@ -2,18 +2,18 @@
 
 exports[`renders primary button style correctly 1`] = `
 <button
-  className="sc-bdfBwQ bNYEgh"
+  className="sc-bdfBwQ eGRlEY"
 />
 `;
 
 exports[`renders secondary button style correctly 1`] = `
 <button
-  className="sc-bdfBwQ fFODGz"
+  className="sc-bdfBwQ cpBHDy"
 />
 `;
 
 exports[`renders without button style correctly 1`] = `
 <button
-  className="sc-bdfBwQ bNYEgh"
+  className="sc-bdfBwQ eGRlEY"
 />
 `;

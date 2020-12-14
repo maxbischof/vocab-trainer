@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       Test erstellen
     </h1>
     <div
-      className="sc-idOhPF eTyXOM"
+      className="sc-idOhPF bSwUqf"
     >
       <svg
         className="sc-kEjbxe dHxCwD"
@@ -40,14 +40,14 @@ exports[`renders correctly 1`] = `
           value=""
         />
         <button
-          className="sc-gsTCUz fHkPqr"
+          className="sc-gsTCUz ifTVhO"
           type="submit"
         >
           Wortpaar hinzufügen
         </button>
       </form>
       <button
-        className="sc-gsTCUz EKePd"
+        className="sc-gsTCUz hobRdM"
         onClick={[Function]}
       >
         Test erstellen

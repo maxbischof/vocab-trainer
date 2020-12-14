@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
     type="text"
   />
   <button
-    className="sc-bdfBwQ bNYEgh"
+    className="sc-bdfBwQ eGRlEY"
   >
     Test starten
   </button>

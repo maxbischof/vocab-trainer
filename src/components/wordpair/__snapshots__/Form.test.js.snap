@@ -2,11 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <form
-  className="sc-dlfnbm eFjHGB"
+  className="sc-dlfnbm cKZJdd"
   onSubmit={[Function]}
 >
   <input
-    className="sc-bdfBwQ hRYrgT"
+    className="sc-bdfBwQ kCvuAu"
     name="foreign"
     onChange={[Function]}
     placeholder="Foreign"
@@ -14,7 +14,7 @@ exports[`renders correctly 1`] = `
     value=""
   />
   <input
-    className="sc-bdfBwQ hRYrgT"
+    className="sc-bdfBwQ kCvuAu"
     name="native"
     onChange={[Function]}
     placeholder="Native"
@@ -22,10 +22,10 @@ exports[`renders correctly 1`] = `
     value=""
   />
   <button
-    className="sc-gsTCUz hwVgqy"
+    className="sc-gsTCUz fHkPqr"
     type="submit"
   >
-    Add word
+    Wortpaar hinzufügen
   </button>
 </form>
 `;

@@ -2,37 +2,57 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-jrAGrp fhTUFE"
+  className="sc-hBEYos gfIhAE"
 >
-  <h1>
-    Test erstellen
-  </h1>
-  <form
-    className="sc-fubCfw hIgeyN"
-    onSubmit={[Function]}
+  <div
+    className="sc-fFubgz jEHjpd"
   >
-    <input
-      className="sc-iBPRYJ jxdMbx"
-      name="foreign"
-      onChange={[Function]}
-      placeholder="Foreign"
-      type="text"
-      value=""
-    />
-    <input
-      className="sc-iBPRYJ jxdMbx"
-      name="native"
-      onChange={[Function]}
-      placeholder="Native"
-      type="text"
-      value=""
-    />
-    <button
-      className="sc-gsTCUz hwVgqy"
-      type="submit"
+    <h1>
+      Test erstellen
+    </h1>
+    <div
+      className="sc-fodVxV gShOgN"
     >
-      Add word
-    </button>
-  </form>
+      <svg
+        className="sc-bkzZxe fZQXYI"
+        onClick={[Function]}
+      >
+        wordClass.svg
+      </svg>
+      <form
+        className="sc-fubCfw ePYkCt"
+        onSubmit={[Function]}
+      >
+        <input
+          className="sc-iBPRYJ evbQSY"
+          name="foreign"
+          onChange={[Function]}
+          placeholder="Foreign"
+          type="text"
+          value=""
+        />
+        <input
+          className="sc-iBPRYJ evbQSY"
+          name="native"
+          onChange={[Function]}
+          placeholder="Native"
+          type="text"
+          value=""
+        />
+        <button
+          className="sc-gsTCUz fHkPqr"
+          type="submit"
+        >
+          Wortpaar hinzufügen
+        </button>
+      </form>
+      <button
+        className="sc-gsTCUz EKePd"
+        onClick={[Function]}
+      >
+        Test erstellen
+      </button>
+    </div>
+  </div>
 </div>
 `;

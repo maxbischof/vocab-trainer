@@ -6,13 +6,13 @@ exports[`renders correctly 1`] = `
   onSubmit={[Function]}
 >
   <input
-    className="sc-gsTCUz bihftr"
+    className="sc-gsTCUz fPXgzG"
     onChange={[Function]}
     placeholder="Bitte Namen eingeben"
     type="text"
   />
   <button
-    className="sc-bdfBwQ giiPgO"
+    className="sc-bdfBwQ bNYEgh"
   >
     Test starten
   </button>

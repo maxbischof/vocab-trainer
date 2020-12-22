@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-gKsewC iEXYNu"
+>
+  <svg
+    className="sc-iBPRYJ fKRoRo"
+    onClick={[Function]}
+  >
+    delete.svg
+  </svg>
+  <div
+    className="sc-eCssSg buxNVn"
+  />
+  <div
+    className="sc-jSgupP gEyGtx"
+  >
+    <div
+      className="sc-bdfBwQ fYyUUw"
+      color="var(--noun)"
+      fontSize={18.166666666666668}
+      onClick={[Function]}
+    >
+      Substantiv
+    </div>
+    <div
+      className="sc-bdfBwQ ikAZdN"
+      color="var(--adjective)"
+      fontSize={18.166666666666668}
+      onClick={[Function]}
+    >
+      Adjektiv
+    </div>
+    <div
+      className="sc-bdfBwQ UrhPZ"
+      color="var(--verb)"
+      fontSize={18.166666666666668}
+      onClick={[Function]}
+    >
+      Verb
+    </div>
+  </div>
+</div>
+`;

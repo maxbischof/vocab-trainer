@@ -2,7 +2,17 @@
 
 exports[`renders correctly 1`] = `
 <input
-  className="sc-bdfBwQ hRYrgT"
+  className="sc-bdfBwQ kCvuAu"
+  name="word"
+  placeholder="Type here"
+  type="text"
+  value=""
+/>
+`;
+
+exports[`renders correctly with error 1`] = `
+<input
+  className="sc-bdfBwQ kFiDjn"
   name="word"
   placeholder="Type here"
   type="text"

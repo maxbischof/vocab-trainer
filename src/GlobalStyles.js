@@ -6,8 +6,18 @@ export default createGlobalStyle`
         --text: #2F2F2F;
         --success: #2ecc71;
         --error: #e74c3c;
-        --buttonbackground: #2ecc71;
+        --primarybutton: #014254;
+        --secondarybutton: #1ABCBD;
         --buttontext: white;
+        --noun: 43, 173, 134;
+        --adjective: 255, 51, 210;
+        --verb: 255, 222, 51;
+        --masculine: 148,203,255;
+        --feminine: 255,148,148;
+        --neuter: 254,255,183;
+        --singular: 254,255,183;
+        --plural: 254,255,183;
+        --person: 254,255,183;
     }
 
     html {
@@ -17,7 +27,7 @@ export default createGlobalStyle`
 
     body {
         background: var(--background);
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Comfortaa', cursive;
         color: var(--text);
         margin: 0;
     }

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bdfBwQ fFnOqh"
+  color="rgba(43, 173, 134, 1)"
+  fontSize={NaN}
+  onClick={[Function]}
+>
+  A
+</div>
+`;

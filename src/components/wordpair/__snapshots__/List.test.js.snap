@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <ul
-  className="sc-hKgILt gAqaJR"
+  className="sc-hKgILt ekpXFV"
 >
   <li
-    className="sc-bdfBwQ ldQlgV"
+    className="sc-bdfBwQ eqgsEt"
   >
     <div
-      className="sc-gsTCUz eugYRC"
+      className="sc-gsTCUz ipUEG"
     >
       <b>
         le ordinateur
@@ -25,10 +25,10 @@ exports[`renders correctly 1`] = `
     </svg>
   </li>
   <li
-    className="sc-bdfBwQ ldQlgV"
+    className="sc-bdfBwQ eqgsEt"
   >
     <div
-      className="sc-gsTCUz eugYRC"
+      className="sc-gsTCUz ipUEG"
     >
       <b>
         la école

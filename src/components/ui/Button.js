@@ -1,9 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Button({ type, onClick, children }) {
+export default function Button({ type, onClick, children, buttonstyle }) {
+  const buttonStyles = {
+    primary: {
+      background: 'var(--primarybutton)',
+    },
+    secondary: {
+      background: 'var(--secondarybutton)',
+    },
+  }
+
   return (
-    <StyledButton type={type} onClick={onClick}>
+    <StyledButton
+      type={type}
+      onClick={onClick}
+      buttonstyle={buttonStyles[buttonstyle]}
+    >
       {children}
     </StyledButton>
   )
@@ -11,11 +24,13 @@ export default function Button({ type, onClick, children }) {
 
 const StyledButton = styled.button`
   border: none;
-  padding: 10px 10px;
-  margin: 10px;
-  background: var(--buttonbackground);
+  margin: 5px;
+  background: ${(props) =>
+    props.buttonstyle?.background || 'var(--primarybutton)'};
   color: white;
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
+  width: 100%;
+  height: 36px;
 `

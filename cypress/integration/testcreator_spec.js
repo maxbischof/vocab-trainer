@@ -3,7 +3,7 @@ describe('TestCreator', () => {
     cy.visit('localhost:3000')
     cy.get('input[name="foreign"]').type('the candle')
     cy.get('input[name="native"]').type('die Kerze')
-    cy.contains('Add word').click()
+    cy.contains('Wortpaar hinzufügen').click()
 
     cy.contains('the candle')
     cy.contains('die Kerze')
@@ -13,11 +13,11 @@ describe('TestCreator', () => {
     cy.visit('localhost:3000')
     cy.get('input[name="foreign"]').type('the candle')
     cy.get('input[name="native"]').type('die Kerze')
-    cy.contains('Add word').click()
+    cy.contains('Wortpaar hinzufügen').click()
 
     cy.get('input[name="foreign"]').type('the tea')
     cy.get('input[name="native"]').type('der Tee')
-    cy.contains('Add word').click()
+    cy.contains('Wortpaar hinzufügen').click()
 
     cy.contains('the candle')
       .parent('div')
@@ -33,11 +33,11 @@ describe('TestCreator', () => {
     cy.visit('localhost:3000')
     cy.get('input[name="foreign"]').type('the candle')
     cy.get('input[name="native"]').type('die Kerze')
-    cy.contains('Add word').click()
+    cy.contains('Wortpaar hinzufügen').click()
 
     cy.get('input[name="foreign"]').type('the tea')
     cy.get('input[name="native"]').type('der Tee')
-    cy.contains('Add word').click()
+    cy.contains('Wortpaar hinzufügen').click()
 
     cy.get('button').contains('Test erstellen').click()
 

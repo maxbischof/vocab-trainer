@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ReactComponent as DeleteSVG } from '../../icons/delete.svg'
+import TagList from './TagList'
 
 export default function WordPair({ word, deleteWord, index }) {
   return (
@@ -8,6 +9,7 @@ export default function WordPair({ word, deleteWord, index }) {
       <Words>
         <b>{word.foreign}</b>
         <small>{word.native}</small>
+        {word.grammar && <TagList tags={word.grammar} />}
       </Words>
       <DeleteIcon onClick={() => deleteWord(index)} />
     </StyledWordpair>

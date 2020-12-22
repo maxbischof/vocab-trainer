@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import TestLink from './TestCreated'
+import TestCreated from './TestCreated'
 import Button from './ui/Button'
 import { createTest } from '../lib/firebase'
 import List from './wordpair/List'
 import Form from './wordpair/Form'
 import GrammarMenu from './grammarmenu/GrammarMenu'
-import { ReactComponent as WordClassSVG } from '../icons/wordClass.svg'
 
 export default function TestCreation({ db }) {
   const [wordPairs, setWordPairs] = useState([])
@@ -17,7 +16,24 @@ export default function TestCreation({ db }) {
   const [number, setNumber] = useState()
   const [showGrammarMenu, setShowGrammarMenu] = useState(false)
 
-  function deleteWord(index) {
+  function addWordPair(wordPair) {
+    if (wordClass || gender || person || number) wordPair.grammar = {}
+    if (wordClass) wordPair.grammar.wordClass = wordClass
+    if (gender) wordPair.grammar.gender = gender
+    if (person) wordPair.grammar.person = person
+    if (number) wordPair.grammar.number = number
+
+    const wordPairsCopy = [...wordPairs]
+    wordPairsCopy.push(wordPair)
+    setWordPairs(wordPairsCopy)
+
+    setGender()
+    setNumber()
+    setPerson()
+    setWordClass()
+  }
+
+  function deleteWordPair(index) {
     const newWords = [...wordPairs]
     newWords.splice(index, 1)
     setWordPairs(newWords)
@@ -33,28 +49,18 @@ export default function TestCreation({ db }) {
   return (
     <>
       {testURL ? (
-        <TestLink testURL={testURL} />
+        <TestCreated testURL={testURL} />
       ) : (
         <StyledTestCreation>
           <BlurWrapper isBlured={showGrammarMenu}>
             <h1>Test erstellen</h1>
             {wordPairs.length > 0 && (
-              <List words={wordPairs} deleteWord={deleteWord} />
+              <List words={wordPairs} deleteWord={deleteWordPair} />
             )}
             <StickyWrapper>
-              <StyledWordClassSVG
-                onClick={() => setShowGrammarMenu(!showGrammarMenu)}
-              />
               <Form
-                wordPairs={wordPairs}
-                setWordPairs={setWordPairs}
-                gender={gender}
-                setGender={setGender}
-                person={person}
-                setPerson={setPerson}
-                number={number}
-                setNumber={setNumber}
-                setWordClass={setWordClass}
+                addWordPair={addWordPair}
+                showGrammarMenu={setShowGrammarMenu}
               />
               <Button
                 buttonstyle="primary"
@@ -97,6 +103,8 @@ const StickyWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background: var(--background);
+  width: 100%;
+  max-width: 600px;
 `
 
 const BlurWrapper = styled.div`
@@ -110,8 +118,4 @@ const BlurWrapper = styled.div`
     filter: blur(5px);
     pointer-events: none;
   `}
-`
-
-const StyledWordClassSVG = styled(WordClassSVG)`
-  cursor: pointer;
 `

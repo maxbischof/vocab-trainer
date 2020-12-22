@@ -16,7 +16,7 @@ exports[`renders correctly 1`] = `
     localhost/tests/123456
   </a>
   <button
-    className="sc-gsTCUz EKePd"
+    className="sc-gsTCUz hobRdM"
     onClick={[Function]}
   >
     Copy

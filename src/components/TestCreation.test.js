@@ -11,8 +11,8 @@ it('renders correctly', () => {
 
 it('add wordpairs to the list', () => {
   render(<TestCreation />)
-  userEvent.type(screen.getByPlaceholderText('Foreign'), 'the car')
-  userEvent.type(screen.getByPlaceholderText('Native'), 'das Auto')
+  userEvent.type(screen.getByPlaceholderText('Fremdsprache'), 'the car')
+  userEvent.type(screen.getByPlaceholderText('Deutsch'), 'das Auto')
   userEvent.click(screen.getByText('Wortpaar hinzufügen'))
 
   expect(screen.getByText(/the car/)).toBeInTheDocument()
@@ -22,8 +22,8 @@ it('add wordpairs to the list', () => {
 
 it('removes wordpairs from the list', () => {
   render(<TestCreation />)
-  userEvent.type(screen.getByPlaceholderText('Foreign'), 'the car')
-  userEvent.type(screen.getByPlaceholderText('Native'), 'das Auto')
+  userEvent.type(screen.getByPlaceholderText('Fremdsprache'), 'the car')
+  userEvent.type(screen.getByPlaceholderText('Deutsch'), 'das Auto')
   userEvent.click(screen.getByText('Wortpaar hinzufügen'))
   userEvent.click(screen.getByRole('listitem').querySelector('svg'))
 

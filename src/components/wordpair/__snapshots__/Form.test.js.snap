@@ -1,31 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<form
-  className="sc-dlfnbm cKZJdd"
-  onSubmit={[Function]}
->
-  <input
-    className="sc-bdfBwQ kCvuAu"
-    name="foreign"
-    onChange={[Function]}
-    placeholder="Foreign"
-    type="text"
-    value=""
-  />
-  <input
-    className="sc-bdfBwQ kCvuAu"
-    name="native"
-    onChange={[Function]}
-    placeholder="Native"
-    type="text"
-    value=""
-  />
-  <button
-    className="sc-gsTCUz fHkPqr"
-    type="submit"
+Array [
+  <svg
+    className="sc-hKgILt dnEjEZ"
+    onClick={[Function]}
   >
-    Wortpaar hinzufügen
-  </button>
-</form>
+    wordClass.svg
+  </svg>,
+  <form
+    className="sc-dlfnbm cKZJdd"
+    onSubmit={[Function]}
+  >
+    <input
+      className="sc-bdfBwQ kCvuAu"
+      name="foreign"
+      onChange={[Function]}
+      placeholder="Fremdsprache"
+      type="text"
+      value=""
+    />
+    <input
+      className="sc-bdfBwQ kCvuAu"
+      name="native"
+      onChange={[Function]}
+      placeholder="Deutsch"
+      type="text"
+      value=""
+    />
+    <button
+      className="sc-gsTCUz ifTVhO"
+      type="submit"
+    >
+      Wortpaar hinzufügen
+    </button>
+  </form>,
+]
 `;

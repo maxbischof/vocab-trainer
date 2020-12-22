@@ -2,52 +2,52 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-hBEYos gfIhAE"
+  className="sc-bkzZxe fHCCqi"
 >
   <div
-    className="sc-fFubgz jEHjpd"
+    className="sc-dIUggk hhDPHI"
   >
     <h1>
       Test erstellen
     </h1>
     <div
-      className="sc-fodVxV gShOgN"
+      className="sc-idOhPF bSwUqf"
     >
       <svg
-        className="sc-bkzZxe fZQXYI"
+        className="sc-kEjbxe dHxCwD"
         onClick={[Function]}
       >
         wordClass.svg
       </svg>
       <form
-        className="sc-fubCfw ePYkCt"
+        className="sc-jrAGrp kBDCpW"
         onSubmit={[Function]}
       >
         <input
-          className="sc-iBPRYJ evbQSY"
+          className="sc-pFZIQ gLAzKS"
           name="foreign"
           onChange={[Function]}
-          placeholder="Foreign"
+          placeholder="Fremdsprache"
           type="text"
           value=""
         />
         <input
-          className="sc-iBPRYJ evbQSY"
+          className="sc-pFZIQ gLAzKS"
           name="native"
           onChange={[Function]}
-          placeholder="Native"
+          placeholder="Deutsch"
           type="text"
           value=""
         />
         <button
-          className="sc-gsTCUz fHkPqr"
+          className="sc-gsTCUz ifTVhO"
           type="submit"
         >
           Wortpaar hinzufügen
         </button>
       </form>
       <button
-        className="sc-gsTCUz EKePd"
+        className="sc-gsTCUz hobRdM"
         onClick={[Function]}
       >
         Test erstellen

@@ -1,24 +1,12 @@
-import React, { createRef, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
+import { ReactComponent as WordClassSVG } from '../../icons/wordClass.svg'
 
-export default function Form({
-  wordPairs,
-  setWordPairs,
-  isBlured,
-  gender,
-  person,
-  number,
-  setGender,
-  setNumber,
-  setPerson,
-  setWordClass,
-}) {
+export default function Form({ addWordPair, showGrammarMenu }) {
   const [formInput, setFormInput] = useState({ foreign: '', native: '' })
   const [validationError, setValidationError] = useState()
-
-  const foreignInput = createRef()
 
   function onSubmit(event) {
     event.preventDefault()
@@ -34,20 +22,9 @@ export default function Form({
       return
     }
 
-    if (gender) formInput.gender = gender
-    if (person) formInput.person = person
-    if (number) formInput.number = number
-
-    const wordPairsCopy = [...wordPairs]
-    wordPairsCopy.push(formInput)
-    setWordPairs(wordPairsCopy)
+    addWordPair(formInput)
 
     setFormInput({ foreign: '', native: '' })
-    setGender()
-    setNumber()
-    setPerson()
-    setWordClass()
-    foreignInput.current.focus()
   }
 
   function onChange(event) {
@@ -59,20 +36,20 @@ export default function Form({
 
   return (
     <>
-      <StyledForm onSubmit={onSubmit} isBlured={isBlured}>
+      <GrammarMenuButton onClick={() => showGrammarMenu(true)} />
+      <StyledForm onSubmit={onSubmit}>
         <Input
           name="foreign"
           type="text"
-          placeholder="Foreign"
+          placeholder="Fremdsprache"
           onChange={onChange}
           value={formInput.foreign}
-          ref={foreignInput}
           error={validationError}
         />
         <Input
           name="native"
           type="text"
-          placeholder="Native"
+          placeholder="Deutsch"
           onChange={onChange}
           value={formInput.native}
           error={validationError}
@@ -91,4 +68,8 @@ const StyledForm = styled.form`
   align-items: center;
   background: var(--background);
   width: 100%;
+`
+
+const GrammarMenuButton = styled(WordClassSVG)`
+  cursor: pointer;
 `

@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <ul
-  className="sc-hKgILt ekpXFV"
+  className="sc-jSgupP cceMQn"
 >
   <li
-    className="sc-bdfBwQ eqgsEt"
+    className="sc-dlfnbm eQxRQi"
   >
     <div
-      className="sc-gsTCUz ipUEG"
+      className="sc-hKgILt jbayWH"
     >
       <b>
         le ordinateur
@@ -16,19 +16,50 @@ exports[`renders correctly 1`] = `
       <small>
         der Computer
       </small>
+      <div
+        className="sc-bdfBwQ cBNdlU"
+      >
+        <span
+          className="sc-gsTCUz gXLnSw"
+          color="var(--noun)"
+        >
+          Substantiv
+        </span>
+        <span
+          className="sc-gsTCUz gXLnSw"
+          color="var(--noun)"
+        >
+           
+          Maskulin
+        </span>
+        <span
+          className="sc-gsTCUz gXLnSw"
+          color="var(--noun)"
+        >
+           
+          plural
+        </span>
+        <span
+          className="sc-gsTCUz gXLnSw"
+          color="var(--noun)"
+        >
+           
+          1. Person
+        </span>
+      </div>
     </div>
     <svg
-      className="sc-dlfnbm lnKTpL"
+      className="sc-eCssSg TaXWm"
       onClick={[Function]}
     >
       delete.svg
     </svg>
   </li>
   <li
-    className="sc-bdfBwQ eqgsEt"
+    className="sc-dlfnbm eQxRQi"
   >
     <div
-      className="sc-gsTCUz ipUEG"
+      className="sc-hKgILt jbayWH"
     >
       <b>
         la école
@@ -36,9 +67,40 @@ exports[`renders correctly 1`] = `
       <small>
         die Schule
       </small>
+      <div
+        className="sc-bdfBwQ cBNdlU"
+      >
+        <span
+          className="sc-gsTCUz hRVGAU"
+          color="var(--verb)"
+        >
+          Verb
+        </span>
+        <span
+          className="sc-gsTCUz hRVGAU"
+          color="var(--verb)"
+        >
+           
+          Feminin
+        </span>
+        <span
+          className="sc-gsTCUz hRVGAU"
+          color="var(--verb)"
+        >
+           
+          Singular
+        </span>
+        <span
+          className="sc-gsTCUz hRVGAU"
+          color="var(--verb)"
+        >
+           
+          2. Person
+        </span>
+      </div>
     </div>
     <svg
-      className="sc-dlfnbm lnKTpL"
+      className="sc-eCssSg TaXWm"
       onClick={[Function]}
     >
       delete.svg

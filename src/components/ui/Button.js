@@ -33,4 +33,5 @@ const StyledButton = styled.button`
   cursor: pointer;
   width: 100%;
   height: 36px;
+  max-width: 238px;
 `

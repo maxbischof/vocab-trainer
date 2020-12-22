@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bdfBwQ cBNdlU"
+>
+  <span
+    className="sc-gsTCUz gXLnSw"
+    color="var(--noun)"
+  >
+    Substantiv
+  </span>
+  <span
+    className="sc-gsTCUz gXLnSw"
+    color="var(--noun)"
+  >
+     
+    Maskulin
+  </span>
+  <span
+    className="sc-gsTCUz gXLnSw"
+    color="var(--noun)"
+  >
+     
+    plural
+  </span>
+  <span
+    className="sc-gsTCUz gXLnSw"
+    color="var(--noun)"
+  >
+     
+    1. Person
+  </span>
+</div>
+`;
